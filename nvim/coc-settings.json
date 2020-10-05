@@ -1,0 +1,23 @@
+{
+    // Explorer
+    // Use icons in Nerd font
+    "explorer.icon.enableNerdfont": true,
+    "explorer.file.showHiddenFiles": true,
+    // See other default key mappings in https://github.com/weirongxu/coc-explorer#custom-mappings-example
+    "explorer.keyMappings": {
+        // Open selected file
+        "<space>": "toggleSelection",
+        // Open file in vertical split window
+        "v": "open:vsplit"
+    },
+    "clangd.semanticHighlighting": true,
+    // snippets
+    "snippets.ultisnips.directories": [
+        "UltiSnips",
+        "~/.config/nvim/snippets"
+    ],
+    "list.source.files.args": ["--hidden", "--files"],
+    "cSpell.userWords": [
+        "cmake"
+    ]
+}

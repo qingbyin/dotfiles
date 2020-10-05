@@ -1,0 +1,7 @@
+.git/
+/autoload/plugged/
+/autoload/*.old
+**/.undodir/
+
+.netrwhist
+Session.vim
