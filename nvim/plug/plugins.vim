@@ -98,6 +98,7 @@ else " Features already exist in VS Code
 
     " Smooth scroll
     Plug 'psliwka/vim-smoothie'
+    Plug 'rhysd/accelerated-jk'
 
     " Swap windows without ruining its layout
     Plug 'wesQ3/vim-windowswap'
@@ -106,6 +107,7 @@ else " Features already exist in VS Code
 
     " Starup screen: show recently used files/sessions
     Plug 'mhinz/vim-startify'
+
 endif
 
 " Initialize plugin system

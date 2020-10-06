@@ -26,4 +26,6 @@ autocmd FileType gitignore,tex let b:autoformat_autoindent=0
 " Disable autosave which is conflicted with coclist
 let g:workspace_autosave = 0
 
-
+" -------------------------
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)
