@@ -1,6 +1,6 @@
 .git/
-/autoload/plugged/
-/autoload/*.old
+nvim/autoload/plugged/
+nvim/autoload/*.old
 **/.undodir/
 
 .netrwhist
