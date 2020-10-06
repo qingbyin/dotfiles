@@ -14,10 +14,13 @@ set list listchars=tab:→\ ,trail:·,precedes:←,extends:→,space:·
 " Hybrid line numbers
 set number relativenumber
 " Hard wrap settings (only break at the end of a word)
-" TODO: Chinese wrap?
 set textwidth=120
 " Vertical ruler
 set colorcolumn=80,100,120
+" Enable Chinese characters wrap, see ":help fo-table"
+set formatoptions+=m
+" When joing lines, don't insert a space before/after a Chinese characters.
+set formatoptions+=M
 
 " Vertical splits will automatically be to the right
 set splitright
