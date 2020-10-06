@@ -20,8 +20,8 @@ nnoremap <silent> <S-TAB> :bprevious<CR>
 nnoremap <silent> <C-s> :w<CR>
 " Alternate way to quit
 nnoremap <silent> <C-q> :wq!<CR>
-" vim-bbye (Kill buffers)
-nnoremap <silent>  <Leader>q :Bdelete<CR>
+" vim-bbye (Save and Kill a buffer)
+nnoremap <silent>  <Leader>q :w<CR> :Bdelete<CR>
 
 " use alt + hjkl to resize windows
 nnoremap <silent> <M-j> :resize -2<CR>

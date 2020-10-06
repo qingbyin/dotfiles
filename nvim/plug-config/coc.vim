@@ -34,6 +34,10 @@ let g:coc_global_extensions = [
             "\ Highlight yanked text and persist yank list across vim.
             "\ Make sure have `:echo exists('##TextYankPost')`
             \ 'coc-yank',
+            "\ Auto completion from tag files
+            \ 'coc-tag',
+            "\ Auto switch current pwd to workspace directory
+            \ 'coc-project',
             \ ]
 
 " TextEdit might fail if hidden is not set.

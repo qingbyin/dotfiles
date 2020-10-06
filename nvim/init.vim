@@ -26,6 +26,9 @@ source $HOME/.config/nvim/plug-config/snippets.vim
 " Git
 source $HOME/.config/nvim/plug-config/git.vim
 
+" Markdown
+source $HOME/.config/nvim/plug-config/markdown.vim
+
 " Others
 source $HOME/.config/nvim/plug-config/others.vim
 
