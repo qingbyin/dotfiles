@@ -25,6 +25,8 @@ autocmd FileType gitignore,tex let b:autoformat_autoindent=0
 
 " Disable autosave which is conflicted with coclist
 let g:workspace_autosave = 0
+" save all your session files in a single directory outside of your workspace
+let g:workspace_session_directory = $HOME . '/.vim/sessions/'
 
 " -------------------------
 nmap j <Plug>(accelerated_jk_gj)

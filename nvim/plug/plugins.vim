@@ -93,7 +93,8 @@ else " Features already exist in VS Code
     " Reopen files at the last edit position
     Plug 'farmergreg/vim-lastplace'
 
-    " Auto save session.vim
+    " Save session.vim
+    " Need run `:ToggleWorkspace`
     Plug 'thaerkh/vim-workspace'
 
     " Smooth scroll

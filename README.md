@@ -2,6 +2,5 @@ Dotfiles.
 
 TODO list:
 
-* [] Use shell scripts to create soft links automatically.
-
+* [ ] Use shell scripts to create soft links automatically.
 
