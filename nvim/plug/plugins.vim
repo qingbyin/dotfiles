@@ -97,6 +97,9 @@ else " Features already exist in VS Code
     " Need run `:ToggleWorkspace`
     Plug 'thaerkh/vim-workspace'
 
+    " Keep buffers grouped separately in workspaces
+    Plug 'dosimple/workspace.vim'
+
     " Smooth scroll
     Plug 'psliwka/vim-smoothie'
     Plug 'rhysd/accelerated-jk'
