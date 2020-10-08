@@ -21,6 +21,8 @@ set colorcolumn=80,100,120
 set formatoptions+=m
 " When joing lines, don't insert a space before/after a Chinese characters.
 set formatoptions+=M
+" Disable soft wrap
+set nowrap
 
 " Vertical splits will automatically be to the right
 set splitright
