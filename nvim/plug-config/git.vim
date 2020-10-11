@@ -57,8 +57,8 @@ endfunction
 autocmd FileType gitmessengerpopup call <SID>setup_git_messenger_popup()
 
 " Navigate chunks (i.e. a block of git changes) of current buffer
-nmap [g <Plug>(coc-git-prevchunk)
-nmap ]g <Plug>(coc-git-nextchunk)
+nmap gk <Plug>(coc-git-prevchunk)
+nmap gj <Plug>(coc-git-nextchunk)
 
 " Create text object for git chunks
 omap ig <Plug>(coc-git-chunk-inner)
@@ -67,7 +67,7 @@ omap ag <Plug>(coc-git-chunk-outer)
 xmap ag <Plug>(coc-git-chunk-outer)
 
 " Chunk stage
-" Mannual use :CocCommand git.chunkStage
+nmap gs :CocCommand git.chunkStage<CR>
 
 " Chunk redo
 " Mannual use :CocCommand git.chunkUndo
