@@ -11,6 +11,8 @@
         "v": "open:vsplit"
     },
     "clangd.semanticHighlighting": true,
+    // Auto Format on save
+    "coc.preferences.formatOnSaveFiletypes": ["cpp"],
     // snippets
     "snippets.ultisnips.directories": [
         "UltiSnips",

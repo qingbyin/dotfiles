@@ -88,7 +88,8 @@ else " Features already exist in VS Code
     " Auto format (Python is required),
     " including removing trailing
     " whitespace
-    Plug 'Chiel92/vim-autoformat'
+    " Use coc nvim build-in format instead
+    " Plug 'Chiel92/vim-autoformat'
 
     " Reopen files at the last edit position
     Plug 'farmergreg/vim-lastplace'

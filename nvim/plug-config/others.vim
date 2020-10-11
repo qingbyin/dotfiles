@@ -19,8 +19,8 @@ let g:floaterm_autoclose = 1
 
 " -------------------------
 " Auto format after saving
-au BufWrite * :Autoformat
-autocmd FileType gitignore,tex let b:autoformat_autoindent=0
+" au BufWrite * :Autoformat
+" autocmd FileType gitignore,tex let b:autoformat_autoindent=0
 
 
 " Disable autosave which is conflicted with coclist
