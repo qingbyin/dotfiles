@@ -12,6 +12,10 @@ cnoremap <c-j> <down>
 cnoremap <c-k> <up>
 cnoremap <c-l> <right>
 
+" Move in completion popup menu
+inoremap <expr> <c-j> ("\<C-n>")
+inoremap <expr> <c-k> ("\<C-p>")
+
 " Tab to move to next/previous buffer
 nnoremap <silent> <TAB> :bnext<CR>
 nnoremap <silent> <S-TAB> :bprevious<CR>
@@ -21,7 +25,7 @@ nnoremap <silent> <C-s> :w<CR>
 " Alternate way to quit
 nnoremap <silent> <C-q> :wq!<CR>
 " vim-bbye (Save and Kill a buffer)
-nnoremap <silent>  <Leader>q :w<CR> :Bdelete<CR>
+nnoremap <silent>  <Leader>q :Bdelete<CR>
 
 " use alt + hjkl to resize windows
 nnoremap <silent> <M-j> :resize -2<CR>
