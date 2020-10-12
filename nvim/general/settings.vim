@@ -38,3 +38,5 @@ set pastetoggle=<F4>
 " Command line auto completion
 set wildmode=longest:full,full
 
+" Enable Doxygen syntax highlightling
+let g:load_doxygen_syntax=1

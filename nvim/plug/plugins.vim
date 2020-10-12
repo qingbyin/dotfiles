@@ -51,6 +51,8 @@ else " Features already exist in VS Code
     Plug 'jackguo380/vim-lsp-cxx-highlight'
     " cmake tool
     Plug 'ilyachur/cmake4vim'
+    " Doxygen
+    Plug 'vim-scripts/DoxygenToolkit.vim'
 
     " -----------------
     " Markdown tools
@@ -110,7 +112,7 @@ else " Features already exist in VS Code
     " Delete buffers without ruining windows layout
     Plug 'moll/vim-bbye'
 
-    " Starup screen: show recently used files/sessions
+    " Startup screen: show recently used files/sessions
     Plug 'mhinz/vim-startify'
 
 endif
