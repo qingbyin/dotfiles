@@ -88,10 +88,10 @@ else " Features already exist in VS Code
     Plug 'ryanoasis/vim-devicons'
 
     " Auto format (Python is required),
-    " including removing trailing
-    " whitespace
     " Use coc nvim build-in format instead
-    " Plug 'Chiel92/vim-autoformat'
+
+    " Add a diff option when Vim finds a swap file
+    Plug 'chrisbra/recover.vim'
 
     " Reopen files at the last edit position
     Plug 'farmergreg/vim-lastplace'
