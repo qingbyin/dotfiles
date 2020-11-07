@@ -11,6 +11,7 @@
         "v": "open:vsplit"
     },
     "clangd.semanticHighlighting": true,
+    "clangd.arguments": ["-cross-file-rename"],
     // Auto Format on save
     "coc.preferences.formatOnSaveFiletypes": ["cpp"],
     // snippets
