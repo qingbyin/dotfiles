@@ -2,6 +2,9 @@
 
 " Remap Escape key
 inoremap jk <Esc>
+" Avoid the delay after only typing `j`
+autocmd InsertEnter * set timeoutlen=200
+autocmd InsertLeave * set timeoutlen=1000
 
 " Map <space> to <leader>
 let mapleader ="\<Space>"
