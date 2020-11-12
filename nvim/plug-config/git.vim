@@ -26,11 +26,6 @@ endfunction
 " Open git commit in the floaterm window (neovim-remote is required)
 let g:floaterm_gitcommit = 'floaterm'
 
-" Open git blame
-let g:blamer_enabled = 1
-" Disable git blame in visual modes since it will cause performance issues
-let g:blamer_show_in_visual_modes = 0
-
 " Add gitignore filetype
 au BufRead,BufNewFile .gitignore setfiletype gitignore
 

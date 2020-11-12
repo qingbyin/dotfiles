@@ -20,6 +20,7 @@
         "~/.config/nvim/snippets"
     ],
     "list.source.files.args": ["--hidden", "--files"],
+    "git.addGBlameToVirtualText": true,
     "cSpell.userWords": [
         "cmake"
     ]

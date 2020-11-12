@@ -36,8 +36,6 @@ else " Features already exist in VS Code
     " Git tools
     " Show git diff in windows (similar to VS Code)
     Plug 'tpope/vim-fugitive'
-    " Show real-time git blame
-    Plug 'APZelos/blamer.nvim'
     " View commmit under the cursor
     Plug 'rhysd/git-messenger.vim'
 
