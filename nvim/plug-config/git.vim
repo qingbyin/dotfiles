@@ -8,6 +8,7 @@
 " set the cursor goes into a popup window when running git-messenger
 let g:git_messenger_always_into_popup=v:true
 let g:git_messenger_no_default_mappings=v:true " Disable default mapping
+let g:git_messenger_include_diff='current'
 
 " Auto show git status (i.e., file has been modified or not) in status line B area
 " +-----------------------------------------------------------------------------+
