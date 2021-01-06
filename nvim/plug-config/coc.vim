@@ -38,6 +38,7 @@ let g:coc_global_extensions = [
             \ 'coc-tag',
             "\ Auto switch current pwd to workspace directory
             \ 'coc-project',
+            \ 'coc-texlab',
             \ ]
 
 " TextEdit might fail if hidden is not set.

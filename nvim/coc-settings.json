@@ -21,6 +21,7 @@
     ],
     "list.source.files.args": ["--hidden", "--files"],
     "git.addGBlameToVirtualText": true,
+    "texlab.path": "/usr/local/bin/texlab",
     "cSpell.userWords": [
         "cmake"
     ]
