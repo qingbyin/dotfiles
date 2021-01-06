@@ -25,6 +25,7 @@ let g:coc_global_extensions = [
             \ 'coc-clangd',
             "\ cmake code autocompletion
             \ 'coc-cmake',
+            \ 'coc-python',
             \ 'coc-markdownlint',
             "\ need to run "python3 -m pip install --user --upgrade pynvim" first
             \ 'coc-snippets',
