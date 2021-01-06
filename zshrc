@@ -142,8 +142,8 @@ export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}
 export LIBGL_ALWAYS_INDIRECT=1
 
 # Go proxy
-go env -w GO111MODULE=on
-go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+# go env -w GO111MODULE=on
+# go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 # Go
 export GOPATH=$HOME/go
 
@@ -161,3 +161,7 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 
 # zotero
 export PATH="$HOME/apps/zotero-5:$PATH"
+
+# PETSc
+export PETSC_DIR="$HOME/petsc"
+export PETSC_ARCH="linux-gnu-real-64"
