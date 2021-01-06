@@ -16,7 +16,7 @@ set background=dark
 colorscheme hybrid_material
 
 " ----------------------------------------
-" Note: custom higlights should be set below colorscheme
+" Note: custom highlights should be set below colorscheme
 " ----------------------------------------
 " Coc message color, consistent with color scheme
 autocmd ColorScheme *
