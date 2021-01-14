@@ -143,8 +143,8 @@ endif
 nmap <F2> <Plug>(coc-rename)
 
 " Toggle fix suggestions (used to fix spell error, code error...)
-nmap <C-space> :CocCommand actions.open<CR>
-imap <C-space> <C-o>:CocCommand actions.open<CR>
+nmap <C-space> <Plug>(coc-codeaction-selected)<cr>
+imap <C-space> <Plug>(coc-codeaction-selected)<cr>
 
 " --------------------------------------------------------
 " Diagnostics (similar to VS Code problem windows)
