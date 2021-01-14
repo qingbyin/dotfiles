@@ -4,11 +4,11 @@
     "explorer.icon.enableNerdfont": true,
     "explorer.file.showHiddenFiles": true,
     // See other default key mappings in https://github.com/weirongxu/coc-explorer#custom-mappings-example
-    "explorer.keyMappings": {
+    "explorer.keyMappings.global": {
         // Open selected file
         "<space>": "toggleSelection",
         // Open file in vertical split window
-        "v": "open:vsplit"
+        "v": "open:vsplit:intelligent"
     },
     "clangd.semanticHighlighting": true,
     "clangd.arguments": ["-cross-file-rename"],
