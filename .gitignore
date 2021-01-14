@@ -2,6 +2,7 @@
 nvim/autoload/plugged/
 nvim/autoload/*.old
 **/.undodir/
+**/__pycache__/
 
 .netrwhist
 Session.vim
