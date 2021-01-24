@@ -41,3 +41,7 @@ nmap <C-l> <C-w>l
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
+
+" Disable build-in help key F1
+nmap <F1> <nop>
+imap <F1> <nop>
