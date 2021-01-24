@@ -44,6 +44,9 @@ else " Features already exist in VS Code
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+    " Graphical Debugger
+    Plug 'puremourning/vimspector'
+
     " C/C++ semantic highlighting
     " See the comparison in https://github.com/clangd/coc-clangd/pull/27
     Plug 'jackguo380/vim-lsp-cxx-highlight'

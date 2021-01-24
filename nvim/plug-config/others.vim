@@ -16,6 +16,8 @@ let g:cmake_compile_commands = 1
 " see https://github.com/voldikss/vim-floaterm/issues/170
 let g:floaterm_autoclose = 1
 
+" -------------------------
+let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools']
 
 " -------------------------
 " Auto format after saving
