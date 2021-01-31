@@ -66,8 +66,6 @@ else " Features already exist in VS Code
     " Note: nodejs and yarn are required
     " See tricks for WSL https://github.com/iamcco/markdown-preview.nvim/issues/199
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-    " Auto generate Markdown tags
-    Plug 'ludovicchabant/vim-gutentags', {'for': 'markdown'}
 
     " vim theme
     " My requirements:
