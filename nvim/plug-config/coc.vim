@@ -16,11 +16,10 @@ let g:coc_global_extensions = [
             "\ Need cooporate with LSP
             \ 'coc-actions',
             \ 'coc-pairs',
-            "\ better peformance than Nerdtree
+            "\ better performance than Nerdtree
             \ 'coc-explorer',
             "\ Choose floating windows by using coc-lists
             \ 'coc-floaterm',
-            \ 'coc-bookmark',
             "\ C/C++ Language server
             \ 'coc-clangd',
             "\ cmake code autocompletion
