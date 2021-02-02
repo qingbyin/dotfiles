@@ -143,7 +143,6 @@ nmap <F2> <Plug>(coc-rename)
 
 " Toggle fix suggestions (used to fix spell error, code error...)
 nmap <C-space> <Plug>(coc-codeaction-selected)<cr>
-imap <C-space> <Plug>(coc-codeaction-selected)<cr>
 
 " --------------------------------------------------------
 " Diagnostics (similar to VS Code problem windows)
