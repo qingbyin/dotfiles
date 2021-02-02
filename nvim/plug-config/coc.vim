@@ -176,11 +176,3 @@ nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 nnoremap <silent><nowait> <Leader>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
 nnoremap <silent><nowait> <Leader>O  :<C-u>CocList -I symbols<cr>
-
-" --------------------------------------------------------
-" Bookmark
-nmap <Leader>m <Plug>(coc-bookmark-toggle)
-nmap <Leader>b :CocList --normal bookmark<CR> " Open bookmark list in normal mode
-nmap <Leader>bj <Plug>(coc-bookmark-next)
-nmap <Leader>bk <Plug>(coc-bookmark-prev)
-
