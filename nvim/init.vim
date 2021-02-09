@@ -19,6 +19,9 @@ source $HOME/.config/nvim/plug-config/theme.vim
 " coc settings and its extensions
 source $HOME/.config/nvim/plug-config/coc.vim
 
+" Format
+source $HOME/.config/nvim/plug-config/format.vim
+
 " Explorer settings
 source $HOME/.config/nvim/plug-config/explorer.vim
 source $HOME/.config/nvim/plug-config/snippets.vim
