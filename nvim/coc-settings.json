@@ -13,7 +13,7 @@
     "clangd.semanticHighlighting": true,
     "clangd.arguments": ["-cross-file-rename"],
     // Auto Format on save
-    "coc.preferences.formatOnSaveFiletypes": ["cpp", "python"],
+    "coc.preferences.formatOnSaveFiletypes": ["cpp", "python", "cmake"],
     "python.formatting.provider": "yapf",
     "python.formatting.yapfPath": "~/.local/bin/yapf",
     // snippets
@@ -26,5 +26,6 @@
     "texlab.path": "/usr/local/bin/texlab",
     "cSpell.userWords": [
         "cmake"
-    ]
+    ],
+    "toml.toml.": ""
 }

@@ -55,6 +55,9 @@ else " Features already exist in VS Code
     " Doxygen
     Plug 'vim-scripts/DoxygenToolkit.vim'
 
+    " toml syntax
+    Plug 'cespare/vim-toml'
+
     " -----------------
     " Markdown tools
     " Format tables (This plugin must come before vim-markdown)
