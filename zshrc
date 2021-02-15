@@ -112,6 +112,7 @@ source "$HOME/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias pip-build="pip3 -v install --global-option build --global-option --debug -e . --user"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -165,3 +166,7 @@ export PATH="$HOME/apps/zotero-5:$PATH"
 # PETSc
 export PETSC_DIR="$HOME/petsc"
 export PETSC_ARCH="linux-gnu-real-64"
+
+# 
+export CXX="/usr/bin/g++-10"
+export CC="/usr/bin/gcc-10"
