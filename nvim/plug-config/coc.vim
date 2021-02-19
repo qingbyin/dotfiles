@@ -141,8 +141,8 @@ endif
 " Symbol renaming.
 nmap <F2> <Plug>(coc-rename)
 
-" Toggle fix suggestions (used to fix spell error, code error...)
-nmap <C-space> <Plug>(coc-codeaction-selected)<cr>
+" Toggle fix suggestions for a word (used to fix spell error, code error...)
+nmap <C-space> <Plug>(coc-codeaction-selected)w
 
 " --------------------------------------------------------
 " Diagnostics (similar to VS Code problem windows)
