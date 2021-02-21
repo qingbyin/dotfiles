@@ -52,8 +52,9 @@ else " Features already exist in VS Code
     Plug 'jackguo380/vim-lsp-cxx-highlight'
     " cmake tool
     Plug 'ilyachur/cmake4vim'
-    " Doxygen
-    Plug 'vim-scripts/DoxygenToolkit.vim'
+
+    " Doc generator for C++ Doxygen, Python, etc.
+    Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
     " toml syntax
     Plug 'cespare/vim-toml'

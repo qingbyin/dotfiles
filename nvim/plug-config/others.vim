@@ -33,3 +33,8 @@ let g:workspace_session_directory = $HOME . '/.vim/sessions/'
 " -------------------------
 nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
+
+" Python doc string style
+let g:doge_doc_standard_python = 'numpy'
+" Disable its key maps
+let g:doge_enable_mappings = 0
