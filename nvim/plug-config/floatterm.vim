@@ -1,2 +1,2 @@
 nnoremap <space>t :FloatermToggle<CR>
-tnoremap <space>t <C-\><C-n>:FloatermToggle<CR>
+tnoremap <C-o> <C-\><C-n>:FloatermToggle<CR>
