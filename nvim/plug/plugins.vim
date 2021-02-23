@@ -30,8 +30,6 @@ else " Features already exist in VS Code
 
     " Floating windows (I used it only for terminal)
     Plug 'voldikss/vim-floaterm'
-    " Open terminal
-    Plug 'skywind3000/vim-terminal-help'
 
     " Git tools
     " Show git diff in windows (similar to VS Code)

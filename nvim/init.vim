@@ -32,6 +32,9 @@ source $HOME/.config/nvim/plug-config/git.vim
 " Markdown
 source $HOME/.config/nvim/plug-config/markdown.vim
 
+" Float term
+source $HOME/.config/nvim/plug-config/floatterm.vim
+
 " Others
 source $HOME/.config/nvim/plug-config/others.vim
 
