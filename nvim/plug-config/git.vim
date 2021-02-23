@@ -35,7 +35,7 @@ au BufRead,BufNewFile .gitignore setfiletype gitignore
 " Mappings
 " ---------------------------------------------------------------
 " Open lazygit (need to install lazygit first)
-nnoremap <silent>  <Leader>G :wa<CR> :FloatermNew lazygit<CR>
+nnoremap <silent>  <Leader>G :wa<CR> :FloatermNew --wintype=float --height=0.6 lazygit<CR>
 
 " Show git difference of the current file
 nnoremap <silent>  <Leader>gD :Gdiffsplit<CR>
