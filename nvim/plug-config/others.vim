@@ -29,6 +29,7 @@ let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools']
 let g:workspace_autosave = 0
 " save all your session files in a single directory outside of your workspace
 let g:workspace_session_directory = $HOME . '/.vim/sessions/'
+let g:startify_session_dir = '~/.vim/sessions'
 
 " -------------------------
 nmap j <Plug>(accelerated_jk_gj)
