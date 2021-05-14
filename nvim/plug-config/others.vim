@@ -39,3 +39,9 @@ nmap k <Plug>(accelerated_jk_gk)
 let g:doge_doc_standard_python = 'numpy'
 " Disable its key maps
 let g:doge_enable_mappings = 0
+
+" Python highlighting
+let g:python_highlight_all = 1
+
+" C/C++ comment style
+autocmd FileType c,cpp,java,edp setlocal commentstring=//\ %s
