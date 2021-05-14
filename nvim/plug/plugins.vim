@@ -54,6 +54,9 @@ else " Features already exist in VS Code
     " Doc generator for C++ Doxygen, Python, etc.
     Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
+    " Python syntax highlighting
+    Plug 'vim-python/python-syntax'
+
     " toml syntax
     Plug 'cespare/vim-toml'
 

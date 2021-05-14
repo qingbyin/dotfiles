@@ -113,6 +113,7 @@ source "$HOME/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pip-build="pip3 -v install --global-option build --global-option --debug -e . --user"
+alias setup-build="python3 setup.py build --debug develop --user"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
