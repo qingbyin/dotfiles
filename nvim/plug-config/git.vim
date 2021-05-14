@@ -68,5 +68,5 @@ xmap ag <Plug>(coc-git-chunk-outer)
 nmap gs :CocCommand git.chunkStage<CR>
 
 " Chunk redo
-" Mannual use :CocCommand git.chunkUndo
+" Manual use :CocCommand git.chunkUndo
 

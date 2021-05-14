@@ -35,6 +35,9 @@ source $HOME/.config/nvim/plug-config/markdown.vim
 " Float term
 source $HOME/.config/nvim/plug-config/floatterm.vim
 
+" Start screen
+source $HOME/.config/nvim/plug-config/startify.vim
+
 " Others
 source $HOME/.config/nvim/plug-config/others.vim
 
