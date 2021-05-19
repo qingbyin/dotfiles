@@ -1,3 +1,17 @@
+# proxy
+if [uname -r | grep -q 'Microsoft']; then # WSL
+    export LOCALIP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
+else
+    export LOCALIP=localhost
+fi
+
+# set DISPLAY variable to the IP automatically assigned to WSL2
+# if [uname -r | grep -q 'Microsoft']; then # WSL
+if [[uname -r | grep -q 'Microsoft']]; then
+    export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+    export LIBGL_ALWAYS_INDIRECT=1
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -112,10 +126,10 @@ source $ZSH/oh-my-zsh.sh
 alias pip-build="pip3 -v install --global-option build --global-option --debug -e . --user"
 alias setup-build="python3 setup.py build --debug develop --user"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 
 # Add user local
 export PATH="$HOME/.local/bin:$PATH"
@@ -123,12 +137,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # Add circleci
 export PATH="$HOME/apps/circleci:$PATH"
 
-# proxy
-if [uname -r | grep -q 'Microsoft'] ; then # WSL
-	export LOCALIP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
-else
-	export LOCALIP=localhost
-fi
 git config --global http.proxy socks5://$LOCALIP:9000
 # Only use system proxy when neccessary, since demestic mirrors are prefered.
 set_sys_proxy() {
@@ -140,11 +148,6 @@ unset_http_proxy() {
     unset https_proxy
 }
 
-# set DISPLAY variable to the IP automatically assigned to WSL2
-if [uname -r | grep -q 'Microsoft'] ; then # WSL
-	export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
-	export LIBGL_ALWAYS_INDIRECT=1
-fi
 
 # Go proxy
 # go env -w GO111MODULE=on
