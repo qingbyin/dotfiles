@@ -84,9 +84,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# vim-mode plugin
-source "$HOME/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -127,7 +124,11 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/apps/circleci:$PATH"
 
 # proxy
-export LOCALIP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
+if [uname -r | grep -q 'Microsoft'] ; then # WSL
+	export LOCALIP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
+else
+	export LOCALIP=localhost
+fi
 git config --global http.proxy socks5://$LOCALIP:9000
 # Only use system proxy when neccessary, since demestic mirrors are prefered.
 set_sys_proxy() {
@@ -140,8 +141,10 @@ unset_http_proxy() {
 }
 
 # set DISPLAY variable to the IP automatically assigned to WSL2
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
-export LIBGL_ALWAYS_INDIRECT=1
+if [uname -r | grep -q 'Microsoft'] ; then # WSL
+	export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+	export LIBGL_ALWAYS_INDIRECT=1
+fi
 
 # Go proxy
 # go env -w GO111MODULE=on
