@@ -1,13 +1,12 @@
 # proxy
-if [uname -r | grep -q 'Microsoft']; then # WSL
+if [[ $(uname -r | grep -q 'Microsoft') ]]; then # WSL
     export LOCALIP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
 else
     export LOCALIP=localhost
 fi
 
 # set DISPLAY variable to the IP automatically assigned to WSL2
-# if [uname -r | grep -q 'Microsoft']; then # WSL
-if [[uname -r | grep -q 'Microsoft']]; then
+if [[ $(uname -r | grep -q 'Microsoft') ]]; then
     export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
     export LIBGL_ALWAYS_INDIRECT=1
 fi
