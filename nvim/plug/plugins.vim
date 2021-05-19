@@ -60,6 +60,9 @@ else " Features already exist in VS Code
     " toml syntax
     Plug 'cespare/vim-toml'
 
+    " i3 config syntax highlighting
+    Plug 'mboughaba/i3config.vim'
+    
     " -----------------
     " Markdown tools
     " Format tables (This plugin must come before vim-markdown)
