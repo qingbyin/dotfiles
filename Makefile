@@ -69,6 +69,8 @@ link_configs:
 	# Map Caps Lock to Ctrl
 	ln -sf $(dotdir)/Xmodmap ~/.Xmodmap
 
+	# Terminal settings
+	ln -sf $(dotdir)/Xresources ~/.Xresources
+
 	git config --global user.name "Qing Yin"
 	git config --global user.email "qingbyin@gmail.com"
-
