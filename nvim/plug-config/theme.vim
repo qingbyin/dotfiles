@@ -3,10 +3,10 @@
 " this next line is needed to enable your custom colors
 syntax enable
 
-" checks if the terminal has 24-bit color support
-if (has("termguicolors"))
-    set termguicolors
-endif
+" checks if the terminal has 24-bit color (true colors) support
+"if (has("termguicolors"))
+"    set termguicolors
+"endif
 
 " some of the code to be bolded, like functions and language controls
 let g:enable_bold_font = 1
