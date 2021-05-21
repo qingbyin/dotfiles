@@ -27,6 +27,7 @@ install_common_apps:
 	yes | sudo pacman -S chromium
 	yes | sudo pacman -S xfce4-terminal
 	yes | sudo pacman -S lazygit
+	yes | sudo yay -S autotiling-git
 	
 .ONESHELL:
 install_zsh:
@@ -71,6 +72,9 @@ link_configs:
 
 	# Terminal settings
 	ln -sf $(dotdir)/Xresources ~/.Xresources
+
+	# rofi
+	ln -sf $(dotdir)/rofi/config.rasi ~/.config/rofi/config.rasi	
 
 	git config --global user.name "Qing Yin"
 	git config --global user.email "qingbyin@gmail.com"
