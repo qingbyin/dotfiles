@@ -275,6 +275,19 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+# Swap windows
+ bindsym $mod+Shift+w mark "swapee"; mode "swap"
+mode "swap" {
+        bindsym h focus left
+        bindsym j focus down
+        bindsym k focus up
+        bindsym l focus right
+
+        # exit mode: Enter or Escape
+        bindsym Return swap container with mark "swapee"; unmark "swapee"; mode "default"
+        bindsym Escape unmark "swapee"; mode "default"
+}
+
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
 
