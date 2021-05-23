@@ -65,6 +65,7 @@ install_fcitx:
 	yay -S fcitx5-pinyin-zhwiki
 	ln -sf $(dotdir)/fcitx/pam_environment ~/.pam_environment
 	ln -sf $(dotdir)/fcitx/pinyin.conf ~/.config/fcitx5/conf/pinyin.conf
+	ln -sf $(dotdir)/fcitx/classicui.conf ~/.config/fcitx5/conf/classicui.conf
 
 link_configs:
 	ln -sf $(dotdir)/i3/config ~/.i3/config
