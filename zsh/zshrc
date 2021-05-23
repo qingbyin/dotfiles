@@ -174,5 +174,5 @@ export PETSC_DIR="$HOME/petsc"
 export PETSC_ARCH="linux-gnu-real-64"
 
 # 
-export CXX="/usr/bin/g++-10"
-export CC="/usr/bin/gcc-10"
+# export CXX="/usr/bin/g++-10"
+# export CC="/usr/bin/gcc-10"
