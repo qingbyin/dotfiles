@@ -5,7 +5,7 @@ ZSH=$(HOME)/.oh-my-zsh
 dotdir=~/dotfiles
 zshdir=~/.oh-my-zsh/custom
 
-all: preparation install_fonts install_common_apps install_vim install_zsh link_configs
+all: preparation install_fonts install_common_apps install_vim install_zsh install_fcitx link_configs
 	@echo "Install dotfiles."
 	@echo "================="
 	@echo ""
@@ -57,6 +57,14 @@ install_vim:
 	yarn config set registry https://registry.npm.taobao.org/
 	ln -sf $(dotdir)/nvim ~/.config/nvim
 #endif
+
+install_fcitx:
+	@echo "Install fcitx..."
+	@echo ""
+	sudo pacman -S fcitx5 fcitx5-chinese-addons fcitx5-qt fcitx5-gtk fcitx5-nord
+	yay -S fcitx5-pinyin-zhwiki
+	ln -sf $(dotdir)/fcitx/pam_environment ~/.pam_environment
+	ln -sf $(dotdir)/fcitx/pinyin.conf ~/.config/fcitx5/conf/pinyin.conf
 
 link_configs:
 	ln -sf $(dotdir)/i3/config ~/.i3/config
