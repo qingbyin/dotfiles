@@ -122,6 +122,10 @@ else " Features already exist in VS Code
     " Startup screen: show recently used files/sessions
     Plug 'mhinz/vim-startify'
 
+    " Pinyin switcher
+    " Plug 'ZSaberLv0/ZFVimIM'
+    " Plug 'ZSaberLv0/ZFVimJob'
+    Plug 'lilydjwg/fcitx.vim'
 endif
 
 " Initialize plugin system
