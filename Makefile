@@ -28,6 +28,9 @@ install_common_apps:
 	yes | sudo pacman -S xfce4-terminal
 	yes | sudo pacman -S lazygit
 	yes | sudo yay -S autotiling-git
+	yes | sudo pacman -S docker
+	sudo systemctl enable docker
+	sudo systemctl start docker
 	
 .ONESHELL:
 install_zsh:
