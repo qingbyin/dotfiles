@@ -31,6 +31,7 @@ install_common_apps:
 	yes | sudo pacman -S docker
 	sudo systemctl enable docker
 	sudo systemctl start docker
+	yes | sudo pacman -S udiskie
 	
 .ONESHELL:
 install_zsh:
