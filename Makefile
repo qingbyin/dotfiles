@@ -32,6 +32,7 @@ install_common_apps:
 	sudo systemctl enable docker
 	sudo systemctl start docker
 	yes | sudo pacman -S udiskie
+	yes | sudo pacman -S evince # eps viewer
 	
 .ONESHELL:
 install_zsh:
