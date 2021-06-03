@@ -136,14 +136,16 @@ export PATH="$HOME/.local/bin:$PATH"
 # Add circleci
 export PATH="$HOME/apps/circleci:$PATH"
 
-git config --global http.proxy socks5://$LOCALIP:9000
 # Only use system proxy when neccessary, since demestic mirrors are prefered.
 set_sys_proxy() {
     export all_proxy=socks5://$LOCALIP:9000
+    # This git proxy may cause a yay ssl error
+    git config --global http.proxy socks5://$LOCALIP:9000
     curl http://ip-api.com/json
 }
 unset_http_proxy() {
     unset all_proxy
+    git config --global --unset http.proxy
 }
 
 

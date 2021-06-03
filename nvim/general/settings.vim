@@ -2,7 +2,7 @@
 " i.e. build-in parameters without plugins
 
 " not working in WSL by far
-" set clipboard=unnamedplus       " Use system clipboard
+set clipboard=unnamedplus       " Use system clipboard
 
 " Tab settings
 set expandtab  " Convert tab to spaces automatically
