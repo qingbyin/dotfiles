@@ -6,6 +6,14 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
+function! Is_WSL() abort
+  let proc_version = '/proc/version'
+  return filereadable(proc_version)
+        \  ? !empty(filter(
+        \    readfile(proc_version, '', 1), { _, val -> val =~? 'microsoft' }))
+        \  : v:false
+endfunction
+
 call plug#begin('~/.config/nvim/autoload/plugged')
 " Surround
 Plug 'tpope/vim-surround'
@@ -125,7 +133,9 @@ else " Features already exist in VS Code
     " Pinyin switcher
     " Plug 'ZSaberLv0/ZFVimIM'
     " Plug 'ZSaberLv0/ZFVimJob'
-    Plug 'lilydjwg/fcitx.vim'
+    if !Is_WSL()
+        Plug 'lilydjwg/fcitx.vim'
+    endif
 endif
 
 " Initialize plugin system
