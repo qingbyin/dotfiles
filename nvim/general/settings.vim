@@ -1,8 +1,17 @@
 " Geenral settings
 " i.e. build-in parameters without plugins
 
-" not working in WSL by far
-set clipboard=unnamedplus       " Use system clipboard
+function! Is_WSL() abort
+  let proc_version = '/proc/version'
+  return filereadable(proc_version)
+        \  ? !empty(filter(
+        \    readfile(proc_version, '', 1), { _, val -> val =~? 'microsoft' }))
+        \  : v:false
+endfunction
+
+if !Is_WSL()
+    set clipboard=unnamedplus       " Use system clipboard
+end
 
 " Tab settings
 set expandtab  " Convert tab to spaces automatically
