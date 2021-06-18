@@ -6,40 +6,45 @@ source $HOME/.config/nvim/general/settings.vim
 " Key mappings
 source $HOME/.config/nvim/general/key-mappings.vim
 
+" Downalod `vim-plug` plugin automatically
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    "autocmd VimEnter * PlugInstall
+    autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
 " --------------------------------------------------------------
-" plugins
+" Modules
 " --------------------------------------------------------------
+ 
+call modules#add('common')
+call modules#add('appearance')
+call modules#add('coc')
+call modules#add('coc_lists')
+call modules#add('git')
+call modules#add('explorer')
+call modules#add('workspace')
+call modules#add('motion')
+call modules#add('snippets')
+" Language
+call modules#add('cpp')
+call modules#add('python')
+call modules#add('latex')
+call modules#add('markdown')
+call modules#add('otherlang')
+call modules#add('pinyin')
+" Load all added modules (i.e. install and config plugins)
+call modules#load_modules()
+call modules#appearance#config_after() " Set themes after installing plugins
 
-" Plugin list
-source $HOME/.config/nvim/plug/plugins.vim
-
-" Theme
-source $HOME/.config/nvim/plug-config/theme.vim
-
-" coc settings and its extensions
-source $HOME/.config/nvim/plug-config/coc.vim
-
-" Format
-source $HOME/.config/nvim/plug-config/format.vim
-
-" Explorer settings
-source $HOME/.config/nvim/plug-config/explorer.vim
-source $HOME/.config/nvim/plug-config/snippets.vim
-
-" Git
-source $HOME/.config/nvim/plug-config/git.vim
-
-" Markdown
-source $HOME/.config/nvim/plug-config/markdown.vim
-
-" Float term
-source $HOME/.config/nvim/plug-config/floatterm.vim
-
-" Start screen
-source $HOME/.config/nvim/plug-config/startify.vim
-
-" Others
-source $HOME/.config/nvim/plug-config/others.vim
+"-----------------------------------------
+" Automatically install missing plugins on startup
+"-----------------------------------------
+autocmd VimEnter *
+            \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+            \|   PlugInstall --sync | q
+            \| endif
 
 " --------------------------------------------------------------
 " VS Code configuration
