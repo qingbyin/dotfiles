@@ -6,7 +6,7 @@ source $HOME/.config/nvim/general/settings.vim
 " Key mappings
 source $HOME/.config/nvim/general/key-mappings.vim
 
-" Downalod `vim-plug` plugin automatically
+" Download `vim-plug` plugin automatically
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
     silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
                 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -17,7 +17,6 @@ endif
 " --------------------------------------------------------------
 " Modules
 " --------------------------------------------------------------
- 
 call modules#add('common')
 call modules#add('appearance')
 call modules#add('coc')

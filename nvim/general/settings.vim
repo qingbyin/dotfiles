@@ -41,7 +41,7 @@ set splitbelow
 " Enable highlightling of the current line
 set cursorline
 
-" Avoid auto-pairs and auto-identing when paste in terminal (non-gui) Vim
+" Avoid auto-pairs and auto-indenting when paste in terminal (non-gui) Vim
 set pastetoggle=<F4>
 
 " Command line auto completion
