@@ -12,6 +12,10 @@ function! modules#snippets#config() abort
 endfunction
 
 function! s:mappings() abort
+    let g:UltiSnipsExpandTrigger = "<nop>" " Let coc.nvim do this action
+    let g:UltiSnipsJumpForwardTrigger = '<tab>'
+    let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
     let g:coc_snippet_next = '<tab>'
     " Jump after inserting a snippet
     " Use <C-j> for jump to next placeholder, it's default of coc.nvim
