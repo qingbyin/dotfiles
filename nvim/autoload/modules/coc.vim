@@ -36,9 +36,6 @@ function! modules#coc#config() abort
     endif
 
     " Auto pair
-    autocmd FileType tex let b:coc_pairs = [["$", "$"]]
-    autocmd FileType markdown let b:coc_pairs = [["**", "**"]]
-
     autocmd FileType vim let b:coc_pairs_disabled = ['"']
 
     " Highlight the symbol and its references when holding the cursor.
