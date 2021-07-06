@@ -33,6 +33,9 @@ install_common_apps:
 	sudo systemctl start docker
 	yes | sudo pacman -S udiskie
 	yes | sudo pacman -S evince # eps viewer
+	yes | sudo pacman -S freedownloadmanager
+	yes | sudo pacman -S thunderbird 
+	yes | yay -S birdtray
 	
 .ONESHELL:
 install_zsh:

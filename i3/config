@@ -315,6 +315,8 @@ exec --no-startup-id shadowsocksr-cli -p 9000 -s 9
 exec_always --no-startup-id autotiling -w 1 2 3
 exec_always --no-startup-id fcitx5
 exec_always --no-startup-id udiskie
+# thunderbird
+exec_always --no-starup-id birdtray
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
