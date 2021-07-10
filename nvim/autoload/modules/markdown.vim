@@ -21,10 +21,12 @@ function! modules#markdown#config() abort
     " Highlight YAML front matter (vim-markdown)
     let g:vim_markdown_frontmatter = 1
     
+    autocmd FileType markdown let b:coc_pairs = [["**", "**"]]
+    
     call s:mappings()
 endfunction
 
 function! s:mappings() abort
-    nmap <Leader>v <Plug>MarkdownPreview
-    nmap <Leader>V <Plug>MarkdownPreviewStop
+    autocmd filetype markdown nmap <Leader>v <Plug>MarkdownPreview
+    autocmd filetype markdown nmap <Leader>V <Plug>MarkdownPreviewStop
 endfunction
