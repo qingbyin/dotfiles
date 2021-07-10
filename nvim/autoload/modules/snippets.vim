@@ -2,7 +2,7 @@ function! modules#snippets#plugins() abort
     let plugins = []
     call add(g:coc_global_extensions, 'coc-snippets')
     " Collection of common snippets files for various languages
-    call add(plugins, ['honza/vim-snippets'])
+    " call add(plugins, ['honza/vim-snippets'])
     call add(plugins, ['sirver/ultisnips'])
     return plugins
 endfunction

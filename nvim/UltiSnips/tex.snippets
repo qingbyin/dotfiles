@@ -2,11 +2,11 @@ global !p
 def math():
 	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
 
-def comment(): 
+def comment():
 	return vim.eval('vimtex#syntax#in_comment()') == '1'
 
 def env(name):
-	[x,y] = vim.eval("vimtex#env#is_inside('" + name + "')") 
+	[x,y] = vim.eval("vimtex#env#is_inside('" + name + "')")
 	return x != '0' and y != '0'
 
 endglobal
@@ -518,6 +518,7 @@ snippet cc "subset" Ai
 \subset 
 endsnippet
 
+context "math()"
 snippet notin "not in " iA
 \not\in 
 endsnippet
@@ -639,6 +640,37 @@ endsnippet
 
 snippet DD "D" iA
 \mathbb{D}
+endsnippet
+
+context "math()"
+snippet xv "coordinate vector" iA
+\bm{x}
+endsnippet
+
+context "math()"
+snippet bf "Bold symbol" iA
+\mathbf{$1}
+endsnippet
+
+context "math()"
+snippet bm "Bold symbol" iA
+\bm{$1}
+endsnippet
+
+snippet sec "Section" b
+\section{$1}
+\label{sec:$1}
+endsnippet
+
+snippet rt "Red text" b
+{\color{red}
+$1
+}
+endsnippet
+
+context "math()"
+snippet dd "Description" iA
+\, \mathrm{d}
 endsnippet
 
 # vim:ft=snippets

@@ -7,6 +7,8 @@ function! modules#latex#plugins() abort
 endfunction
 
 function! modules#latex#config() abort
+    autocmd FileType tex let b:coc_pairs = [["$", "$"]]
+
     let g:tex_flavor = 'latex'
     let g:vimtex_view_general_viewer = 'sumatraPDF'
     let g:vimtex_view_general_options = '-reuse-instance @pdf'
@@ -14,4 +16,13 @@ function! modules#latex#config() abort
     " Convert unfocused LaTex math code into real symbols
     autocmd filetype tex set conceallevel=2
     let g:tex_conceal='abdmg'
+
+    let g:vimtex_mappings_enabled=0
+    call s:mappings()
+endfunction
+
+function! s:mappings() abort
+    autocmd filetype tex imap <F5> <plug>(vimtex-compile)
+    autocmd filetype tex nmap <F5> <plug>(vimtex-compile)
+    autocmd filetype tex nmap <Space>v <plug>(vimtex-view)
 endfunction
