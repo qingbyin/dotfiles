@@ -10,9 +10,15 @@ function! modules#latex#config() abort
     autocmd FileType tex let b:coc_pairs = [["$", "$"]]
 
     let g:tex_flavor = 'latex'
-    let g:vimtex_view_general_viewer = 'sumatraPDF'
-    let g:vimtex_view_general_options = '-reuse-instance @pdf'
-    let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+    " Setting for sumatraPDF
+    " let g:vimtex_view_general_viewer = 'sumatraPDF'
+    " let g:vimtex_view_general_options = '-reuse-instance @pdf'
+    " let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+    
+    " Setting for zathura
+    " Remark: configure neovim backforward search using neovim-remote (see vimtex help)
+    let g:vimtex_view_method='zathura'
+
     " Convert unfocused LaTex math code into real symbols
     autocmd filetype tex set conceallevel=2
     let g:tex_conceal='abdmg'
