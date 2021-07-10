@@ -36,6 +36,8 @@ install_common_apps:
 	yes | sudo pacman -S freedownloadmanager
 	yes | sudo pacman -S thunderbird 
 	yes | yay -S birdtray
+	yes | sudo pacman -S zathura zathura-pdf-mupdf
+	yes | sudo pacman -S flameshot
 	
 .ONESHELL:
 install_zsh:
