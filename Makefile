@@ -95,5 +95,8 @@ link_configs:
 	# rofi
 	ln -sf $(dotdir)/rofi/config.rasi ~/.config/rofi/config.rasi	
 
+	# zathura
+	ln -sf ${dotdir}/zathura ~/.config/zathura/zathurarc	
+
 	git config --global user.name "Qing Yin"
 	git config --global user.email "qingbyin@gmail.com"
