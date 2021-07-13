@@ -23,6 +23,7 @@
         "~/.config/nvim/snippets"
     ],
     "list.source.files.args": ["--hidden", "--files"],
+    "session.saveOnVimLeave": false,
     "git.addGBlameToVirtualText": true,
     "texlab.path": "/usr/local/bin/texlab",
     "cSpell.userWords": [
