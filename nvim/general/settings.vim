@@ -1,4 +1,4 @@
-" Geenral settings
+" General settings
 " i.e. build-in parameters without plugins
 
 function! Is_WSL() abort
@@ -9,9 +9,9 @@ function! Is_WSL() abort
         \  : v:false
 endfunction
 
-if !Is_WSL()
-    set clipboard=unnamedplus       " Use system clipboard
-end
+" if !Is_WSL()
+"     set clipboard=unnamedplus       " Use system clipboard
+" end
 
 " Tab settings
 set expandtab  " Convert tab to spaces automatically
@@ -23,12 +23,12 @@ set list listchars=tab:→\ ,trail:·,precedes:←,extends:→,space:·
 " Hybrid line numbers
 set number relativenumber
 " Hard wrap settings (only break at the end of a word)
-set textwidth=120
+set textwidth=80
 " Vertical ruler
 set colorcolumn=80,100,120
 " Enable Chinese characters wrap, see ":help fo-table"
 set formatoptions+=m
-" When joing lines, don't insert a space before/after a Chinese characters.
+" When joning lines, don't insert a space before/after a Chinese characters.
 set formatoptions+=M
 " Disable soft wrap
 set nowrap
