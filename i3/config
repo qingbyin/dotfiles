@@ -120,9 +120,10 @@ bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+space fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+s layout stacking
+# bindsym $mod+t layout tabbed
+# bindsym $mod+e layout toggle split
+bindsym $mod+e exec pcmanfm
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -239,7 +240,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
-bindsym $mod+0 mode "$mode_system"
+# bindsym $mod+0 mode "$mode_system"
+bindsym $mod+Escape mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
