@@ -37,7 +37,8 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+q kill
 
 # start program launcher (press win key)
-bindcode 133 --release exec --no-startup-id rofi -show run
+# bindcode 133 --release exec --no-startup-id rofi -show run
+bindsym $mod+space exec --no-startup-id rofi -show run
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 # launch categorized menu
@@ -116,8 +117,8 @@ bindsym $mod+v split v;exec notify-send 'tile vertically'
 # bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
-# bindsym $mod+f fullscreen toggle
-bindsym $mod+space fullscreen toggle
+bindsym $mod+f fullscreen toggle
+# bindsym $mod+space fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
@@ -306,6 +307,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
+exec --no-startup-id blueberry-tray
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_custom
 # exec --no-startup-id start_conky_green
