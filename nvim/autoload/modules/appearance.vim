@@ -19,9 +19,9 @@ function! modules#appearance#config() abort
     syntax enable
 
     " checks if the terminal has 24-bit color (true colors) support
-    "if (has("termguicolors"))
-    "    set termguicolors
-    "endif
+    if (has("termguicolors"))
+        set termguicolors
+    endif
 
     " some of the code to be bolded, like functions and language controls
     let g:enable_bold_font = 1

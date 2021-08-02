@@ -8,6 +8,7 @@ function! modules#common#plugins() abort
     call add(plugins, ['tpope/vim-commentary'])
 
     " Highlight word under cursor and its occurrences
+    " also color colorcodes, e.g. #ff0000
     call add(g:coc_global_extensions, 'coc-highlight')
     call add(g:coc_global_extensions, 'coc-spell-checker')
 
