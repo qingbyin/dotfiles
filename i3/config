@@ -321,7 +321,12 @@ exec_always --no-startup-id autotiling -w 1 2 3
 exec_always --no-startup-id fcitx5
 exec_always --no-startup-id udiskie
 # thunderbird
-exec_always --no-starup-id birdtray
+exec_always --no-startup-id birdtray
+exec --no-startup-id rclone mount onedrive:storage ~/storage --vfs-cache-mode full --daemon
+exec --no-startup-id rclone mount onedrive:notebook ~/notebook --vfs-cache-mode full --daemon
+# microsoft todo
+# exec_always --no-startup-id ao --proxy-server=socks5://127.0.0.1:9000
+
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
