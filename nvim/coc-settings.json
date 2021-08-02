@@ -27,8 +27,16 @@
     "git.addGBlameToVirtualText": true,
     "texlab.path": "/usr/local/bin/texlab",
     "cSpell.userWords": [
+      "Biot",
+      "Biot's",
+      "Terzaghi",
       "cmake",
-      "numpy"
+      "discretized",
+      "geomechanical",
+      "linearization",
+      "numpy",
+      "poroelastic",
+      "poroelasticity"
     ],
     "cSpell.enabledLanguageIds": [
         "vim",
@@ -66,5 +74,8 @@
         "yaml",
         "yml"
     ],
-    "toml.toml.": ""
+    "cSpell.ignoreRegExpList": [
+      "\\\\\\w*(\\[.*?\\])?(\\{.*?\\})?",
+      "\\$.+?\\$"
+    ]
 }
