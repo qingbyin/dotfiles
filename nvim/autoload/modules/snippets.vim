@@ -12,7 +12,7 @@ function! modules#snippets#config() abort
 endfunction
 
 function! s:mappings() abort
-    let g:UltiSnipsExpandTrigger = "<nop>" " Let coc.nvim do this action
+    let g:UltiSnipsExpandTrigger = "<tab>" " Need this to trigger functions though coc.nvim do this action
     " let g:UltiSnipsJumpForwardTrigger = '<tab>'
     let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
