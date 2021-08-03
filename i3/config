@@ -9,7 +9,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 1
+default_border pixel 2
 default_floating_border normal
 
 # Hide borders
@@ -283,7 +283,7 @@ mode "resize" {
 }
 
 # Swap windows
- bindsym $mod+Shift+w mark "swapee"; mode "swap"
+bindsym $mod+Shift+w mark "swapee"; mode "swap"
 mode "swap" {
         bindsym h focus left
         bindsym j focus down
