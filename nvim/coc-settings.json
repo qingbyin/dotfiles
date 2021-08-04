@@ -1,23 +1,17 @@
 {
-    // Explorer
-    // Use icons in Nerd font
     "explorer.icon.enableNerdfont": true,
     "explorer.file.showHiddenFiles": true,
-    // See other default key mappings in https://github.com/weirongxu/coc-explorer#custom-mappings-example
     "explorer.keyMappings.global": {
-        // Open selected file
         "<space>": "toggleSelection",
-        // Open file in vertical split window
         "v": "open:vsplit:intelligent"
     },
     "clangd.semanticHighlighting": true,
     "clangd.arguments": ["-cross-file-rename"],
-    // Auto Format on save
     "coc.preferences.formatOnSaveFiletypes": ["cpp", "python", "cmake"],
     "python.formatting.provider": "yapf",
     "python.formatting.yapfPath": "~/.local/bin/yapf",
     "python.pythonPath": "/usr/bin/python3",
-    // snippets
+    "suggest.noselect": false,
     "snippets.ultisnips.directories": [
         "UltiSnips",
         "~/.config/nvim/snippets"
@@ -25,13 +19,13 @@
     "list.source.files.args": ["--hidden", "--files"],
     "session.saveOnVimLeave": false,
     "git.addGBlameToVirtualText": true,
-    "texlab.path": "/usr/local/bin/texlab",
     "cSpell.userWords": [
       "Biot",
       "Biot's",
       "Terzaghi",
       "cmake",
       "discretized",
+      "dofs",
       "geomechanical",
       "linearization",
       "numpy",
