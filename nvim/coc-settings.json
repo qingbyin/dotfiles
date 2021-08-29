@@ -7,7 +7,8 @@
     },
     "clangd.semanticHighlighting": true,
     "clangd.arguments": ["-cross-file-rename"],
-    "coc.preferences.formatOnSaveFiletypes": ["cpp", "python", "cmake"],
+    "clangd.fallbackFlags": ["-std=c++2a"],
+    "coc.preferences.formatOnSaveFiletypes": ["cpp", "python", "cmake", "rust"],
     "python.formatting.provider": "yapf",
     "python.formatting.yapfPath": "~/.local/bin/yapf",
     "python.pythonPath": "/usr/bin/python3",
@@ -32,7 +33,8 @@
       "linearization",
       "numpy",
       "poroelastic",
-      "poroelasticity"
+      "poroelasticity",
+      "poromechanical"
     ],
     "cSpell.enabledLanguageIds": [
         "vim",
