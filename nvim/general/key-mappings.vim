@@ -15,9 +15,7 @@ cnoremap <c-j> <down>
 cnoremap <c-k> <up>
 cnoremap <c-l> <right>
 
-" Move in completion popup menu
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
+inoremap <c-j> <nop>
 
 " Tab to move to next/previous buffer
 nnoremap <silent> <TAB> :bnext<CR>
