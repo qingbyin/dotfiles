@@ -29,6 +29,7 @@ call modules#add('snippets')
 " Language
 call modules#add('cpp')
 call modules#add('python')
+call modules#add('rust')
 call modules#add('latex')
 call modules#add('markdown')
 call modules#add('otherlang')
