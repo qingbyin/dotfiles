@@ -581,7 +581,7 @@ snippet set "set" wA
 \\{$1\\} $0
 endsnippet
 
-snippet || "mid" iA
+snippet || "mid" i
  \mid 
 endsnippet
 
@@ -711,6 +711,7 @@ snippet HH "H" iA
 \mathbb{H}
 endsnippet
 
+context "math()"
 snippet DD "D" iA
 \mathbb{D}
 endsnippet
@@ -749,6 +750,18 @@ endsnippet
 context "math()"
 snippet jump "Jump operator" i
 \llbracket $1 \rrbracket$2
+endsnippet
+
+snippet root "Tex root file" b
+% !TEX root = $1
+$2
+endsnippet
+
+snippet CD_dtx "Code block in the dtx file" b
+% ^^A ==========================================================================
+% ^^A $1
+% ^^A ==========================================================================
+% $2
 endsnippet
 
 # vim:ft=snippets
