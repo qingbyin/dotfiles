@@ -35,6 +35,7 @@ bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+q kill
+bindsym $mod+Shift+q exec xkill
 
 # start program launcher (press win key)
 # bindcode 133 --release exec --no-startup-id rofi -show run
@@ -310,7 +311,7 @@ exec --no-startup-id blueberry-tray
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_custom
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 30 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id qv2ray
