@@ -194,7 +194,6 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
@@ -321,7 +320,10 @@ exec_always --no-startup-id autotiling -w 1 2 3
 exec_always --no-startup-id fcitx5
 exec_always --no-startup-id udiskie
 # thunderbird
+assign [class="Thunderbird"] 
+bindsym $mod+m workspace ; exec thunderbird
 exec_always --no-startup-id birdtray
+# rclone
 exec --no-startup-id rclone mount onedrive:storage ~/storage --vfs-cache-mode full --daemon
 exec --no-startup-id rclone mount onedrive:notebook ~/notebook --vfs-cache-mode full --daemon
 # microsoft todo exec_always --no-startup-id ao --proxy-server=socks5://127.0.0.1:9000
