@@ -43,7 +43,14 @@ bindsym $mod+space exec --no-startup-id rofi -show run
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 # launch categorized menu
-bindsym $mod+z exec --no-startup-id morc_menu
+# bindsym $mod+z exec --no-startup-id morc_menu
+
+# zotero
+for_window [class="Zotero"] mark "zotero", move scratchpad
+bindsym $mod+z [con_mark="zotero"] scratchpad show 
+
+# dict
+bindsym $mod+d exec goldendict
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
