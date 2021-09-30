@@ -16,6 +16,7 @@ function! modules#common#plugins() abort
     " Make sure have `:echo exists('##TextYankPost')`
     call add(g:coc_global_extensions, 'coc-yank')
 
+    " call add(plugins, ['dstein64/vim-startuptime'])
     return plugins
 endfunction
 
