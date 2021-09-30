@@ -320,16 +320,17 @@ snippet lr{ "left\{ right\}" i
 \left\\{ ${1:${VISUAL}} \right\\} $0
 endsnippet
 
-snippet lrb "left\{ right\}" i
+snippet lrB "left\{ right\}" i
 \left\\{ ${1:${VISUAL}} \right\\} $0
 endsnippet
 
+context "math()"
 snippet lr[ "left[ right]" i
 \left[ ${1:${VISUAL}} \right] $0
 endsnippet
 
 snippet lra "leftangle rightangle" iA
-\left<${1:${VISUAL}} \right>$0
+\left< ${1:${VISUAL}} \right>$0
 endsnippet
 
 context "math()"
@@ -734,6 +735,14 @@ endsnippet
 snippet sec "Section" b
 \section{$1}
 \label{sec:$1}
+endsnippet
+
+snippet subsec "SubSection" b
+\subsection{$1}
+endsnippet
+
+snippet subsubsec "SubsubSection" b
+\subsubsection{$1}
 endsnippet
 
 snippet rt "Red text" b
