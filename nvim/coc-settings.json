@@ -22,6 +22,7 @@
     "git.addGBlameToVirtualText": true,
     "markdownlint.config": {"MD007": {"indent": 4}
     },
+    "yank.enableCompletion": false,
     "cSpell.userWords": [
       "Abaqus",
       "Biot",
