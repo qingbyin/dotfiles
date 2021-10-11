@@ -20,7 +20,10 @@
     "list.source.files.args": ["--hidden", "--files"],
     "session.saveOnVimLeave": false,
     "git.addGBlameToVirtualText": true,
+    "markdownlint.config": {"MD007": {"indent": 4}
+    },
     "cSpell.userWords": [
+      "Abaqus",
       "Biot",
       "Biot's",
       "Raphson",
