@@ -43,3 +43,11 @@ nmap <C-k> <C-w>k
 " Disable build-in help key F1
 nmap <F1> <nop>
 imap <F1> <nop>
+
+" Copy and Paste to a specific register
+nnoremap <silent> <leader>yy "myy
+vnoremap <silent> <leader>y "my
+nnoremap <silent> <leader>p "mp
+
+" Auto add \item in list
+inoremap <M-i> \item<space>
