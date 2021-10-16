@@ -47,6 +47,8 @@ imap <F1> <nop>
 " Copy and Paste to a specific register
 nnoremap <silent> <leader>yy "myy
 vnoremap <silent> <leader>y "my
+" copy to the system clipboard
+vnoremap <silent> <leader>Y "+y
 nnoremap <silent> <leader>p "mp
 
 " Auto add \item in list
