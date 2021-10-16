@@ -27,6 +27,7 @@
       "Abaqus",
       "Biot",
       "Biot's",
+      "LEFM",
       "Raphson",
       "Terzaghi",
       "Terzaghi's",
@@ -34,12 +35,15 @@
       "discretized",
       "dofs",
       "elastoplastic",
+      "geomaterials",
       "geomechanical",
       "linearization",
       "numpy",
       "poroelastic",
       "poroelasticity",
-      "poromechanical"
+      "poromechanical",
+      "uncracked",
+      "vectorize"
     ],
     "cSpell.enabledLanguageIds": [
         "vim",
