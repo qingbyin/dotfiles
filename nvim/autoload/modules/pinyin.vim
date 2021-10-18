@@ -7,6 +7,7 @@ function! modules#pinyin#plugins() abort
 endfunction
 
 function! modules#pinyin#config() abort
+    let g:fcitx5_remote = '/usr/bin/fcitx5-remote'
 endfunction
 
 function! s:is_wsl() abort
