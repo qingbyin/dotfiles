@@ -19,6 +19,8 @@ function! modules#python#config() abort
     " doc auto generator style
     let g:pydocstring_formatter = 'numpy'
     
+    " the path to the virtual env's path
+    let g:python3_host_prog='~/miniconda3/bin/python'
     call s:mappings()
 endfunction
 
