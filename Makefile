@@ -40,6 +40,7 @@ install_common_apps:
 	yes | sudo pacman -S zathura zathura-pdf-mupdf
 	yes | sudo pacman -S flameshot
 	yes | sudo pacman -S textlive-most texlive-langchinese
+	yes | sudo pacman -S arandr # xrandr GUI
 	# doc option: very big
 	# yes | yay -S texlive-most-doc
 	
