@@ -85,6 +85,8 @@ bindsym $mod+F1 exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 focus_follows_mouse no
+# when switching between workspaces, do not center the mouse cursor
+mouse_warping none
 
 # change focus
 bindsym $mod+j focus down
