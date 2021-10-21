@@ -93,6 +93,7 @@ plugins=(
     last-working-dir
     git
     zsh-syntax-highlighting
+    # autoenv # install before: yay -S autoenv-git
     poetry
     pip
     conda-zsh-completion
@@ -101,6 +102,8 @@ plugins=(
 )
 # Required by the conda plugin
 fpath+=$ZSH/custom/plugins/conda-zsh-completion
+# autornv
+# export AUTOENV_ENABLE_LEAVE="true"
 
 source $ZSH/oh-my-zsh.sh
 
