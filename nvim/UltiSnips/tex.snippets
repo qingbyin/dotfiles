@@ -1,3 +1,4 @@
+# vim:ft=snippets
 global !p
 def math():
 	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
@@ -76,25 +77,37 @@ endglobal
 snippet template "Basic template" b
 \documentclass[a4paper]{article}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
-\usepackage[dutch]{babel}
-\usepackage{amsmath, amssymb}
+% Math
+\usepackage{mathtools}
+% Provide bold font for math symbols because mathbf does not work
+\usepackage{bm}
+% Provide various useful mathematical symbols
+\usepackage{amssymb,stmaryrd}
+\usepackage{siunitx}  % SI units
 
+% figures packages
+\usepackage{graphicx}  % images management
+\graphicspath{{figs/}}
+\usepackage{caption, subcaption}  % figures and sub figures
 
-% figure support
-\usepackage{import}
-\usepackage{xifthen}
-\pdfminorversion=7
-\usepackage{pdfpages}
-\usepackage{transparent}
-\newcommand{\incfig}[1]{%
-	\def\svgwidth{\columnwidth}
-	\import{./figures/}{#1.pdf_tex}
-}
+% figures packages
+\usepackage{graphicx}  % images management
+\graphicspath{{figs/}}
+\usepackage{caption, subcaption}  % figures and sub figures
 
-\pdfsuppresswarningpagegroup=1
+% table packages
+\usepackage{booktabs}  % professional tables
+% Increase the matrix and table vertical spacing
+\renewcommand{\arraystretch}{1.4}
+
+% Tune styles
+% Provide a reasonable page setup
+\usepackage[margin=2.5cm,nohead]{geometry}
+\usepackage{microtype}
+
+% hyper link which should be the last command
+\usepackage[colorlinks,allcolors=cyan]{hyperref}
+\usepackage[capitalise, nameinlink]{cleveref}  % after hyperref package
 
 \begin{document}
 	$0
@@ -139,7 +152,7 @@ snippet fig "Figure environment" b
 \begin{figure}[${1:htpb}]
 	\centering
 	\includegraphics[${2:width=0.8\textwidth}]{$3}
-	\caption{${4:$3}}
+	\caption{$4}
 	\label{fig:${5:${3/\W+/-/g}}}
 \end{figure}
 endsnippet
@@ -773,4 +786,7 @@ snippet CD_dtx "Code block in the dtx file" b
 % $2
 endsnippet
 
-# vim:ft=snippets
+snippet cmd "Define newcommand" b
+\newcommand{$1}{$2}
+endsnippet
+
