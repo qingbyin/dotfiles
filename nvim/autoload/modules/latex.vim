@@ -1,6 +1,6 @@
 function! modules#latex#plugins() abort
     let plugins = []
-    call add(plugins, ['lervag/vimtex', {'merged' : 0, 'on_ft': ['bib', 'tex']}])
+    " call add(plugins, ['lervag/vimtex', {'merged' : 0, 'on_ft': ['bib', 'tex']}])
     call add(plugins, ['KeitaNakamura/tex-conceal.vim', {'for': 'tex'}])
     call add(g:coc_global_extensions, 'coc-texlab')
     return plugins
@@ -17,18 +17,21 @@ function! modules#latex#config() abort
     
     " Setting for zathura
     " Remark: configure neovim backforward search using neovim-remote (see vimtex help)
-    let g:vimtex_view_method='zathura'
+    " let g:vimtex_view_method='zathura'
+
+    " suppress the warning
+    " let g:vimtex_quickfix_ignore_filters = ['while executing']
 
     " Convert unfocused LaTex math code into real symbols
     autocmd filetype tex set conceallevel=2
     let g:tex_conceal='abdmg'
 
-    let g:vimtex_mappings_enabled=0
+    " let g:vimtex_mappings_enabled=0
     call s:mappings()
 endfunction
 
 function! s:mappings() abort
-    autocmd filetype tex imap <F5> <plug>(vimtex-compile)
-    autocmd filetype tex nmap <F5> <plug>(vimtex-compile)
-    autocmd filetype tex nmap <Space>v <plug>(vimtex-view)
+    autocmd filetype tex imap <F5> :CocCommand latex.Build<CR>
+    autocmd filetype tex nmap <F5> :CocCommand latex.Build<CR>
+    autocmd filetype tex nmap <Space>v :CocCommand latex.ForwardSearch<CR>
 endfunction
