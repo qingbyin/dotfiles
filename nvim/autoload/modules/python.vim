@@ -20,7 +20,9 @@ function! modules#python#config() abort
     let g:pydocstring_formatter = 'numpy'
     
     " the path to the virtual env's path
-    let g:python3_host_prog='~/miniconda3/bin/python'
+    let g:python3_host_prog = '~/miniconda3/bin/python'
+    " Disable python 2 support
+    let g:loaded_python_provider = 0
     call s:mappings()
 endfunction
 
