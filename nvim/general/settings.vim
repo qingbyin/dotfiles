@@ -46,3 +46,6 @@ set pastetoggle=<F4>
 
 " Command line auto completion
 set wildmode=longest:full,full
+
+" Auto remove trailing whitespace when saving
+autocmd FileType markdown,tex autocmd BufWritePre <buffer> %s/\s\+$//e
