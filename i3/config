@@ -328,8 +328,8 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id qv2ray
 # exec --no-startup-id shadowsocksr-cli -p 9000 -s 9
-# Enable auto tiling in workspace 1, 2, 3
-exec_always --no-startup-id autotiling -w 1 2 3
+# Enable auto tiling in workspace 1, 2, 3, 4, 5
+exec_always --no-startup-id autotiling -w 1 2 3 4 5
 exec_always --no-startup-id fcitx5
 exec_always --no-startup-id udiskie
 # thunderbird
