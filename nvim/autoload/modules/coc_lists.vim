@@ -30,5 +30,5 @@ function! s:mappings() abort
     " Find symbol of current document.
     nnoremap <silent><nowait> <Leader>o  :<C-u>CocList outline<cr>
     " Search workspace symbols.
-    nnoremap <silent><nowait> <Leader>O  :<C-u>CocList -I symbols<cr>
+    " nnoremap <silent><nowait> <Leader>O  :<C-u>CocList -I symbols<cr>
 endfunction

@@ -96,4 +96,6 @@ function! s:mappings() abort
       vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
     endif
 
+    " Show outline in tree view
+    nnoremap <space>O :CocOutline<CR>
 endfunction
