@@ -132,6 +132,12 @@ snippet beg "begin{} / end{}" bA
 \\end{$1}
 endsnippet
 
+snippet eq "equation environment" b
+\\begin{equation}
+	$0
+\\end{equation}
+endsnippet
+
 priority 100
 snippet ... "ldots" iA
 \ldots
@@ -391,7 +397,7 @@ snippet cb "^3" iA
 endsnippet
 
 context "math()"
-snippet td "to the ... power" iA
+snippet td "to the ... power" i
 ^{$1}$0
 endsnippet
 
@@ -601,7 +607,7 @@ endsnippet
 
 
 context "math()"
-snippet cc "subset" Ai
+snippet cc "subset" i
 \subset 
 endsnippet
 
@@ -666,7 +672,7 @@ _\text{$1} $0
 endsnippet
 
 context "math()"
-snippet tt "text" iA
+snippet tt "text" i
 \text{$1}$0
 endsnippet
 
@@ -747,7 +753,7 @@ endsnippet
 
 snippet sec "Section" b
 \section{$1}
-\label{sec:$1}
+\label{sec:$2}
 endsnippet
 
 snippet subsec "SubSection" b
@@ -790,3 +796,6 @@ snippet cmd "Define newcommand" b
 \newcommand{$1}{$2}
 endsnippet
 
+snippet cf "Cleaver crossref" wi
+\cref{$1}$0
+endsnippet

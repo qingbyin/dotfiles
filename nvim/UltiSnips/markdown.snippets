@@ -13,3 +13,25 @@ endsnippet
 snippet img "Image"
 ![${1:pic alt}](${2:path}${3/.+/ "/}${3:opt title}${3/.+/"/})$0
 endsnippet
+
+snippet rt "Red text" b
+<span style="color:red">
+$0
+</span>
+endsnippet
+
+snippet cb "Codeblock" b
+\`\`\`${1:bash}
+$2
+\`\`\`
+$0
+endsnippet
+
+snippet /* "Comment"
+<!-- ${1:${VISUAL}} -->$0
+endsnippet
+
+snippet mk "inline math" wA
+$$1$$2
+endsnippet
+

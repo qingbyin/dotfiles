@@ -20,6 +20,8 @@ function! modules#markdown#config() abort
     let g:vim_markdown_no_default_key_mappings = 1
     " Highlight YAML front matter (vim-markdown)
     let g:vim_markdown_frontmatter = 1
+    " Highlight math
+    let g:vim_markdown_math = 1
     
     autocmd FileType markdown let b:coc_pairs = [["**", "**"]]
     
