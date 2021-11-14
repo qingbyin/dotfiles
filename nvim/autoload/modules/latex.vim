@@ -1,6 +1,8 @@
 function! modules#latex#plugins() abort
     let plugins = []
-    " call add(plugins, ['lervag/vimtex', {'merged' : 0, 'on_ft': ['bib', 'tex']}])
+    " Only use vimtex in the UltiSnips (to check math mode)
+    " Use coc-texlab to build and view pdf
+    call add(plugins, ['lervag/vimtex', {'merged' : 0, 'on_ft': ['bib', 'tex']}])
     call add(plugins, ['KeitaNakamura/tex-conceal.vim', {'for': 'tex'}])
     call add(g:coc_global_extensions, 'coc-texlab')
     return plugins
@@ -26,7 +28,12 @@ function! modules#latex#config() abort
     autocmd filetype tex set conceallevel=2
     let g:tex_conceal='abdmg'
 
-    " let g:vimtex_mappings_enabled=0
+    " Fix the motion lag caused by math pairs:
+    " See :h vimtex-nf-enhanced-matchparen
+    " let g:vimtex_matchparen_enabled = 0
+    let g:matchup_override_vimtex = 1
+
+    let g:vimtex_mappings_enabled=0
     call s:mappings()
 endfunction
 
