@@ -17,7 +17,8 @@ function! modules#python#config() abort
     let g:python_highlight_all = 1
 
     " doc auto generator style
-    let g:pydocstring_formatter = 'numpy'
+    " let g:pydocstring_formatter = 'sphinx'
+    let g:pydocstring_templates_path = '~/.config/pydocstring/'
     
     " the path to the virtual env's path
     let g:python3_host_prog = '~/miniconda3/bin/python'
