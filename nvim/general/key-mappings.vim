@@ -8,6 +8,7 @@ autocmd InsertLeave * set timeoutlen=1000
 
 " Map <space> to <leader>
 let mapleader ="\<Space>"
+let maplocalleader = "\\"
 
 " Move in command mode
 cnoremap <c-h> <left>
@@ -45,11 +46,12 @@ nmap <F1> <nop>
 imap <F1> <nop>
 
 " Copy and Paste to a specific register
-nnoremap <silent> <leader>yy "myy
-vnoremap <silent> <leader>y "my
-" copy to the system clipboard
-vnoremap <silent> <leader>Y "+y
+nnoremap <silent> <leader>Y "myy
+vnoremap <silent> <leader>Y "my
 nnoremap <silent> <leader>p "mp
+" copy to the system clipboard
+nnoremap <silent> <leader>yy "+yy
+vnoremap <silent> <leader>y "+y
 
 " Auto add \item in list
 inoremap <M-i> \item<space>

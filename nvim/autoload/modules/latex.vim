@@ -1,6 +1,5 @@
 function! modules#latex#plugins() abort
     let plugins = []
-    " Only use vimtex in the UltiSnips (to check math mode)
     " Use coc-texlab to build and view pdf
     call add(plugins, ['lervag/vimtex', {'merged' : 0, 'on_ft': ['bib', 'tex']}])
     call add(plugins, ['KeitaNakamura/tex-conceal.vim', {'for': 'tex'}])
@@ -19,7 +18,7 @@ function! modules#latex#config() abort
     
     " Setting for zathura
     " Remark: configure neovim backforward search using neovim-remote (see vimtex help)
-    " let g:vimtex_view_method='zathura'
+    let g:vimtex_view_method='zathura'
 
     " suppress the warning
     " let g:vimtex_quickfix_ignore_filters = ['while executing']
@@ -33,7 +32,6 @@ function! modules#latex#config() abort
     " let g:vimtex_matchparen_enabled = 0
     let g:matchup_override_vimtex = 1
 
-    let g:vimtex_mappings_enabled=0
     call s:mappings()
 endfunction
 
