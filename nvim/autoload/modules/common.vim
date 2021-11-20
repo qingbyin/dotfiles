@@ -3,8 +3,6 @@ function! modules#common#plugins() abort
     call add(plugins, ['tpope/vim-surround'])
     " (cooporated with surround.vim, so that ds, cs, yss can be repeated)
     call add(plugins, ['tpope/vim-repeat'])
-    " Enhanced pairs match up
-    call add(plugins, ['andymass/vim-matchup'])
     
     call add(g:coc_global_extensions, 'coc-pairs')
     " Better Comments (gcc key)
@@ -24,7 +22,4 @@ function! modules#common#plugins() abort
 endfunction
 
 function! modules#common#config() abort
-    " Fixe the match pairs lag
-    let g:matchup_matchparen_timeout = 60
-    let g:matchup_matchparen_insert_timeout = 60
 endfunction

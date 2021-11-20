@@ -33,12 +33,6 @@ function! modules#latex#config() abort
     " Convert unfocused LaTex math code into real symbols
     autocmd filetype tex set conceallevel=2
     let g:tex_conceal='abdmg'
-
-    " Fix the motion lag caused by math pairs:
-    " See :h vimtex-nf-enhanced-matchparen
-    " let g:vimtex_matchparen_enabled = 0
-    let g:matchup_override_vimtex = 1
-
     call s:mappings()
 endfunction
 
