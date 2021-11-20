@@ -22,6 +22,13 @@ function! modules#latex#config() abort
 
     " suppress the warning
     " let g:vimtex_quickfix_ignore_filters = ['while executing']
+    let g:vim_log_ignore = 0
+    let g:vimtex_quickfix_enabled = 0
+
+    " vimtex toc
+    let g:vimtex_toc_config = {
+                \ 'split_pos': 'vert rightbelow',
+                \}
 
     " Convert unfocused LaTex math code into real symbols
     autocmd filetype tex set conceallevel=2
@@ -36,7 +43,10 @@ function! modules#latex#config() abort
 endfunction
 
 function! s:mappings() abort
-    autocmd filetype tex imap <F5> :CocCommand latex.Build<CR>
-    autocmd filetype tex nmap <F5> :CocCommand latex.Build<CR>
-    autocmd filetype tex nmap <Space>v :CocCommand latex.ForwardSearch<CR>
+    " autocmd filetype tex imap <F5> :CocCommand latex.Build<CR>
+    " autocmd filetype tex nmap <F5> :CocCommand latex.Build<CR>
+    " autocmd filetype tex nmap <Space>v :CocCommand latex.ForwardSearch<CR>
+    autocmd filetype tex imap <F5> <plug>(vimtex-compile)
+    autocmd filetype tex nmap <F5> <plug>(vimtex-compile)
+    autocmd filetype tex nmap <Space>v <plug>(vimtex-view)
 endfunction
