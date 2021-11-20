@@ -6,16 +6,12 @@ function! modules#appearance#plugins() abort
     call add(plugins, ['arcticicestudio/nord-vim'])
     " Status line theme (Note install a font that supports powerline icons)
     call add(plugins, ['nvim-lualine/lualine.nvim'])
-    " call add(plugins, ['vim-airline/vim-airline-themes'])
     " Icons shown in status/tab lines (can show file icon alongside filename)
-    " call add(plugins, ['ryanoasis/vim-devicons'])
     call add(plugins, ['kyazdani42/nvim-web-devicons'])
     return plugins
 endfunction
 
 function! modules#appearance#config() abort
-    " Theme settings
-
     " this next line is needed to enable your custom colors
     syntax enable
 
@@ -27,32 +23,8 @@ function! modules#appearance#config() abort
     " some of the code to be bolded, like functions and language controls
     let g:enable_bold_font = 1
 
-    " --------------------------
-    " Status line theme settings
-    let g:airline_theme = "hybrid"
-    let g:airline_powerline_fonts = 1
-    " We don't need to see things like -- INSERT -- anymore (airline already has one)
+    " We don't need to see things like -- INSERT -- anymore (statusline already has one)
     set noshowmode
-
-    " -------------------------
-    " Tab line settings
-    " Always show tabs
-    set showtabline=2
-    " Tab line theme
-    let g:airline#extensions#tabline#enabled = 1
-    " Hide tabline close button
-    let g:airline#extensions#tabline#show_close_button = 0
-    " Hide the type of a tab, e.g. [buffers]/[tabs]
-    let g:airline#extensions#tabline#show_tab_type = 0
-    " Hide the tab number
-    let g:airline#extensions#tabline#show_tab_nr = 0
-    " let g:airline#extensions#tabline#buffers_label = ''
-    " If two tabs have the same name, it will display its name with the parent directory.
-    " 'improved' feature will suppress common parts of paths.
-    let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-    " show the filename + the first paraent directory only
-    " /home/user/project/subdir/file.ext -> subdir/file.ext
-    " let g:airline#extensions#tabline#formatter = 'short_path'
 endfunction
 
 function! modules#appearance#config_after() abort
