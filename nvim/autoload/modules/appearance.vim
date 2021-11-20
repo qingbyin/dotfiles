@@ -5,10 +5,10 @@ function! modules#appearance#plugins() abort
     call add(plugins, ['sainnhe/forest-night'])
     call add(plugins, ['arcticicestudio/nord-vim'])
     " Status line theme (Note install a font that supports powerline icons)
-    call add(plugins, ['vim-airline/vim-airline'])
-    call add(plugins, ['vim-airline/vim-airline-themes'])
+    call add(plugins, ['nvim-lualine/lualine.nvim'])
+    " call add(plugins, ['vim-airline/vim-airline-themes'])
     " Icons shown in status/tab lines
-    call add(plugins, ['ryanoasis/vim-devicons'])
+    " call add(plugins, ['ryanoasis/vim-devicons'])
     return plugins
 endfunction
 

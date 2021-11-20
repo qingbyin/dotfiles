@@ -46,6 +46,16 @@ autocmd VimEnter *
             \|   PlugInstall --sync | q
             \| endif
 
+
+"-----------------------------------------
+" Luna scripts
+"-----------------------------------------
+lua << EOF
+require'lualine'.setup {
+    options = {theme = 'material'}
+}
+EOF
+
 " --------------------------------------------------------------
 " VS Code configuration
 " --------------------------------------------------------------
