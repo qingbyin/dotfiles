@@ -12,6 +12,8 @@ function! s:mappings() abort
     " Search files from current cwd
     " Mimic quick open key in VS Code
     nmap <C-p> :CocList files<CR>
+    " List opened files
+    nmap <space> :CocList buffers<CR>
 
     " Find word in current buffer
     nmap <silent> <space>f :CocList words<CR>
