@@ -52,7 +52,15 @@ autocmd VimEnter *
 "-----------------------------------------
 lua << EOF
 require'lualine'.setup {
-    options = {theme = 'material'}
+    options = {theme = 'onedark'},
+    tabline = {
+      lualine_a = {},
+      lualine_b = {'buffers'},
+      lualine_c = {},
+      lualine_x = {},
+      lualine_y = {},
+      lualine_z = {'tabs'}
+    }
 }
 EOF
 

@@ -7,8 +7,9 @@ function! modules#appearance#plugins() abort
     " Status line theme (Note install a font that supports powerline icons)
     call add(plugins, ['nvim-lualine/lualine.nvim'])
     " call add(plugins, ['vim-airline/vim-airline-themes'])
-    " Icons shown in status/tab lines
+    " Icons shown in status/tab lines (can show file icon alongside filename)
     " call add(plugins, ['ryanoasis/vim-devicons'])
+    call add(plugins, ['kyazdani42/nvim-web-devicons'])
     return plugins
 endfunction
 
