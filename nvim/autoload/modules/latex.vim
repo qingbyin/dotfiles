@@ -20,6 +20,15 @@ function! modules#latex#config() abort
     " Remark: configure neovim backforward search using neovim-remote (see vimtex help)
     let g:vimtex_view_method='zathura'
 
+    " latexmk options
+    let g:vimtex_compiler_latexmk = {
+      \ 'options' : [
+      \   '-xelatex',
+      \   '-synctex=1',
+      \   '-interaction=nonstopmode',
+      \ ]
+      \}
+
     " suppress the warning
     " let g:vimtex_quickfix_ignore_filters = ['while executing']
     let g:vim_log_ignore = 0
@@ -39,8 +48,8 @@ endfunction
 function! s:mappings() abort
     " autocmd filetype tex imap <F5> :CocCommand latex.Build<CR>
     " autocmd filetype tex nmap <F5> :CocCommand latex.Build<CR>
-    " autocmd filetype tex nmap <Space>v :CocCommand latex.ForwardSearch<CR>
+    autocmd filetype tex nmap <Space>v :CocCommand latex.ForwardSearch<CR>
     autocmd filetype tex imap <F5> <plug>(vimtex-compile)
     autocmd filetype tex nmap <F5> <plug>(vimtex-compile)
-    autocmd filetype tex nmap <Space>v <plug>(vimtex-view)
+    " autocmd filetype tex nmap <Space>v <plug>(vimtex-view)
 endfunction
