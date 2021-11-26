@@ -43,6 +43,9 @@ function! s:mappings() abort
         inoremap <silent><expr> <c-@> coc#refresh()
     endif
 
+    " Do not use <Enter> key to trigger completion
+    inoremap <expr> <CR> pumvisible() ? "\<C-E>\<CR>" : "\<CR>"
+
     " Note: Let coc.nvim handles the completion key mappings
     " but let ultisnips expand function snippets such as create_matrix
     let g:UltiSnipsExpandTrigger = "<s-tab>" 
