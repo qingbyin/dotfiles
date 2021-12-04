@@ -61,13 +61,16 @@
       "linearization",
       "matplotlib",
       "numpy",
+      "pcolormesh",
       "poroelastic",
       "poroelasticity",
       "poromechanical",
       "pybind",
       "pyproject",
       "uncracked",
-      "vectorize"
+      "vectorize",
+      "xticks",
+      "yticks"
     ],
     "cSpell.enabledLanguageIds": [
         "vim",
