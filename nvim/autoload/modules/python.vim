@@ -41,12 +41,17 @@ endfunction
 function! s:mappings() abort
     autocmd filetype python nmap <silent> <space>d <Plug>(pydocstring)
 
+    " Run codi for interactive coding
+    autocmd filetype python nmap <space>r :Codi<CR>
+    autocmd filetype python nmap <space>R :Codi!<CR>
+
     " Open IPython terminal
     autocmd filetype python nmap <space>t :call IPythonOpen()<CR>
     " Run
     autocmd filetype python nmap <F5> :IPythonCellExecuteCell<CR>
     autocmd filetype python imap <F5> :IPythonCellExecuteCell<CR>
-    autocmd filetype python nnoremap <Leader>r :IPythonCellRun<CR>
+    autocmd filetype python nnoremap <F6> :IPythonCellRun<CR>
+    autocmd filetype python inoremap <F6> :IPythonCellRun<CR>
     " close all Matplotlib figure windows
     autocmd filetype python nnoremap <Leader>x :IPythonCellClose<CR>
 
