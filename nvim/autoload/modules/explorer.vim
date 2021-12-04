@@ -51,7 +51,8 @@ function! s:mappings() abort
     " nmap <Leader>em :CocCommand explorer --preset floating<CR> " middle position
     " nmap <Leader>el :CocCommand explorer --preset floatingLeftside<CR>
     " nmap <Leader>er :CocCommand explorer --preset floatingRightside<CR>
-    "
-    nnoremap <space>t :FloatermToggle<CR>
-    tnoremap <C-o> <C-\><C-n>:FloatermToggle<CR>
+    
+    " Open a horizontal terminal at the bottom of the window
+    " nnoremap <space>t :FloatermToggle<CR>
+    " tnoremap <C-o> <C-\><C-n>:FloatermToggle<CR>
 endfunction
