@@ -38,8 +38,6 @@ function! modules#coc#config() abort
         set signcolumn=yes
     endif
 
-    " Auto pair
-    autocmd FileType vim let b:coc_pairs_disabled = ['"']
 
     " Highlight the symbol and its references when holding the cursor.
     autocmd CursorHold * silent call CocActionAsync('highlight')

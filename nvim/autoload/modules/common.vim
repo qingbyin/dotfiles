@@ -32,4 +32,7 @@ function! modules#common#config() abort
     let g:codi#virtual_text = 0
 
     let g:codi#log="/tmp/codi.log"
+
+    " Auto pair
+    autocmd FileType vim let b:coc_pairs_disabled = ['"']
 endfunction
