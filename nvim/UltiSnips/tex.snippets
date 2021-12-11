@@ -155,9 +155,9 @@ snippet table "Table environment" b
 endsnippet
 
 snippet fig "Figure environment" b
-\begin{figure}[${1:htpb}]
+\begin{figure}[htpb]
 	\centering
-	\includegraphics[${2:width=0.8\textwidth}]{$3}
+	\includegraphics[width=${1:0.8}\textwidth]{$3}
 	\caption{$4}
 	\label{fig:${5:${3/\W+/-/g}}}
 \end{figure}
@@ -751,9 +751,13 @@ snippet bm "Bold symbol" i
 \bm{$1}$0
 endsnippet
 
+snippet chap "Chapter" b
+\chapter{$1}
+$0
+endsnippet
+
 snippet sec "Section" b
 \section{$1}
-\label{sec:$2}
 endsnippet
 
 snippet subsec "SubSection" b
@@ -802,4 +806,32 @@ endsnippet
 
 snippet ci "Reference cite" wi
 \cite{$1}$0
+endsnippet
+
+snippet wc "Description" wi
+内聚力临界开启宽度
+endsnippet
+
+snippet lefm "Description" wi
+线弹性断裂力学理论
+endsnippet
+
+snippet gc "Description" wi
+裂缝扩展临界能量释放率
+endsnippet
+
+snippet kic "Description" wi
+临界应力强度因子（断裂韧性）
+endsnippet
+
+snippet ki "Description" wi
+断裂韧性
+endsnippet
+
+snippet w "Description" wi
+裂缝宽度 $w$
+endsnippet
+
+snippet jd "Description" wi
+裂缝尖端渐近行为
 endsnippet
