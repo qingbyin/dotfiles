@@ -337,8 +337,8 @@ assign [class="Thunderbird"] 
 bindsym $mod+m workspace ; exec thunderbird
 exec_always --no-startup-id birdtray
 # rclone
-exec --no-startup-id rclone mount onedrive:storage ~/storage --vfs-cache-mode full --daemon
-exec --no-startup-id rclone mount onedrive:notebook ~/notebook --vfs-cache-mode full --daemon
+# exec --no-startup-id rclone mount onedrive:storage ~/storage --vfs-cache-mode full --daemon
+# exec --no-startup-id rclone mount onedrive:notebook ~/notebook --vfs-cache-mode full --daemon
 # microsoft todo exec_always --no-startup-id ao --proxy-server=socks5://127.0.0.1:9000
 
 
