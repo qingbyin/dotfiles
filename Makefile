@@ -27,7 +27,7 @@ install_common_apps:
 	yes | sudo pacman -S chromium
 	yes | sudo pacman -S xfce4-terminal
 	yes | sudo pacman -S lazygit
-	yes | sudo yay -S autotiling-git
+	yes | yay -S autotiling-git
 	yes | sudo pacman -S docker
 	sudo systemctl enable docker
 	sudo systemctl start docker
@@ -41,6 +41,7 @@ install_common_apps:
 	yes | sudo pacman -S flameshot
 	yes | sudo pacman -S textlive-most texlive-langchinese
 	yes | sudo pacman -S arandr # xrandr GUI
+	yes | yay -S drawio-desktip-bin 
 	# doc option: very big
 	# yes | yay -S texlive-most-doc
 	
