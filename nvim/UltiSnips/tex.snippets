@@ -198,13 +198,16 @@ snippet iff "iff" i
 \iff
 endsnippet
 
-snippet mk "Math" wA
-$${1}$`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
-	snip.rv = ' '
-else:
-	snip.rv = ''
-`$2
+# snippet mk "Math" wi
+# $${1}$`!p
+# if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+# 	snip.rv = ' '
+# else:
+# 	snip.rv = ''
+# `$2
+# endsnippet
+snippet mk "Description" wi
+$${1}$${0}
 endsnippet
 
 snippet dm "Math" w
@@ -834,4 +837,24 @@ endsnippet
 
 snippet jd "Description" wi
 裂缝尖端渐近行为
+endsnippet
+
+snippet nongc "Description" wi
+无量纲断裂能 $\nongc=\gc/\og$
+endsnippet
+
+snippet nonsig "Description" wi
+无量纲临界内聚力 $\nonsig = \csig / \osig$
+endsnippet
+
+snippet mdis "Description" wi
+流体粘性控制渐近行为
+endsnippet
+
+snippet kdis "Description" wi
+断裂韧性控制渐近行为
+endsnippet
+
+snippet odis "Description" wi
+流体滞后控制渐近行为
 endsnippet
