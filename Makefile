@@ -61,13 +61,20 @@ install_zsh:
 	git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${zshdir}/themes/powerlevel10k
 	git clone https://github.com/zsh-users/zsh-autosuggestions ${zshdir}/plugins/zsh-autosuggestions
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting ${zshdir}/plugins/zsh-syntax-highlighting
+	git clone https://github.com/esc/conda-zsh-completion ${zshdir}/plugins/conda-zsh-completion
+
 	ln -sf $(dotdir)/zsh/zshrc ~/.zshrc
 	ln -sf $(dotdir)/zsh/p10k.zsh ~/.p10k.zsh
+
+install_conda:
+	@echo "Install miniconda3.."
+	bash < (curl -s https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py39_4.10.3-Linux-x86_64.sh)
 
 install_vim:
 #ifeq (, $(shell which nvim))
 	@echo "Install neovim..."
 	sudo pacman -S neovim python-pynvim
+	pip install pynvim
 	# Install node and yarn(required by coc.nvim)
 	sudo pacman -S yarn	
 	yarn config set registry https://registry.npm.taobao.org/
