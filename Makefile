@@ -99,9 +99,11 @@ link_configs:
 	ln -sf $(dotdir)/Xresources ~/.Xresources
 
 	# rofi
+	mkdir -p ~/.config/rofi
 	ln -sf $(dotdir)/rofi/config.rasi ~/.config/rofi/config.rasi	
 
 	# zathura
+	mkdir -p ~/.config/zathura
 	ln -sf ${dotdir}/zathura ~/.config/zathura/zathurarc	
 
 	git config --global user.name "Qing Yin"
