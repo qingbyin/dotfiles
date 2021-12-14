@@ -94,7 +94,7 @@ plugins=(
     git
     zsh-syntax-highlighting
     # autoenv # install before: yay -S autoenv-git
-    poetry
+    # poetry
     pip
     conda-zsh-completion
     # Move this autosuggestions to the bottom to avoid being overriding
