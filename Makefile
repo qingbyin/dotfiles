@@ -98,6 +98,7 @@ install_fcitx:
 
 link_configs:
 	ln -sf $(dotdir)/i3/config ~/.i3/config
+	ln -sf $(dotdir)/i3/i3status.sh ~/.i3/i3status.sh
 
 	mkdir -p ~/.local/bin
 	mkdir -p ~/.config/conky
