@@ -19,6 +19,11 @@ preparation:
 	sudo pacman-mirrors -f 0
 	sudo pacman -Syu
 
+	# ArchlinuxCN contains common fonts, apps
+	echo "[archlinuxcn]" | sudo tee -a /etc/pacman.conf
+	echo "Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch" | sudo tee -a /etc/pacman.conf
+	sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring
+
 install_conda:
 	@echo "Install miniconda3.."
 	bash < (curl -s https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py39_4.10.3-Linux-x86_64.sh)
@@ -28,7 +33,7 @@ install_ssr:
 
 install_fonts:
 	# i3 config use them for windows
-	@yay -S nerd-fonts-fira-code
+	sudo pacman -S nerd-fonts-fira-code # require ArchlinuxCN
 	yes | @sudo pacman -S wqy-microhei
 
 install_basic:
@@ -75,8 +80,10 @@ install_common_apps:
 	yes | sudo pacman -S textlive-most texlive-langchinese
 	yes | sudo pacman -S arandr # xrandr GUI
 	yes | yay -S drawio-desktip-bin 
-	# doc option: very big
+	# doc option: very big (with all package documentations)
 	# yes | yay -S texlive-most-doc
+	# without doc, and use online doc: https://texdoc.org/index.html
+	sudo pacman -S texlive-most
 
 install_zathura:
 	yes | sudo pacman -S zathura zathura-pdf-mupdf
