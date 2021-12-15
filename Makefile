@@ -100,6 +100,9 @@ install_vim:
 	sudo pacman -S yarn	
 	yarn config set registry https://registry.npm.taobao.org/
 	ln -sf $(dotdir)/nvim ~/.config/nvim
+
+	# Required by coc-nvim search
+	sudo pacman -S ripgrep
 #endif
 
 install_fcitx:
