@@ -44,6 +44,12 @@ install_common_apps:
 	yes | yay -S drawio-desktip-bin 
 	# doc option: very big
 	# yes | yay -S texlive-most-doc
+
+install_pomodoro:
+	sudo pacman -S python-gobject gtk3
+	pip install click pydbus i3ipc pygobject
+	yay -S gnome-shell-pomodoro
+	yay -S i3-gnome-pomodoro-git
 	
 .ONESHELL:
 install_zsh:
