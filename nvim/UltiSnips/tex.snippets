@@ -549,7 +549,7 @@ endsnippet
 
 priority 200
 context "math()"
-snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int)' "ln" rwA
+snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int)' "ln" rw
 \\`!p snip.rv = match.group(1)`
 endsnippet
 
@@ -740,7 +740,7 @@ snippet DD "D" iA
 endsnippet
 
 context "math()"
-snippet xv "coordinate vector" iA
+snippet xv "coordinate vector" i
 \bm{x}
 endsnippet
 
@@ -863,14 +863,44 @@ snippet nons "Description" wi
 无量纲特征长度 $\nons$ $1
 endsnippet
 
+snippet nonw "Description" wi
+无量纲裂缝宽度 $\nonw$ $1
+endsnippet
+
+
 snippet s "Description" wi
 特征长度 $s$ $1
 endsnippet
 
 snippet akic "Description" wi
-表观断裂韧性 $\akic$ 
+有效断裂韧性 $\akic$ 
 endsnippet
 
 snippet nonH "Description" wi
 无量纲裂缝高度 $\nonH$ 
+endsnippet
+
+snippet ddm "Description" wi
+位移不连续法 (DDM) 
+endsnippet
+
+
+snippet eddm "Description" wi
+椭圆位移不连续法 (EDDM) 
+endsnippet
+
+snippet aw "Description" wi
+有效裂缝宽度 $\aw$
+endsnippet
+
+snippet algorithm "algorithm" b
+\begin{algorithm}[H]
+  \caption{$0}
+  \label{algo:implementation}
+  $1;
+  \BlankLine
+  \Repeat{$2}{
+  $3
+  }
+\end{algorithm}
 endsnippet
