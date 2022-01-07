@@ -271,7 +271,7 @@ mode "$mode_system" {
 }
 
 # Resize window (you can also use the mouse for that)
-bindsym $mod+w mode "resize"
+bindsym $mod+Shift+w mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
         # Pressing left will shrink the window’s width.
@@ -295,7 +295,7 @@ mode "resize" {
 }
 
 # Swap windows
-bindsym $mod+Shift+w mark "swapee"; mode "swap"
+# bindsym $mod+Shift+w mark "swapee"; mode "swap"
 mode "swap" {
         bindsym h focus left
         bindsym j focus down
@@ -336,10 +336,17 @@ exec_always --no-startup-id udiskie
 assign [class="Thunderbird"] 
 bindsym $mod+m workspace ; exec thunderbird
 exec_always --no-startup-id birdtray
-# rclone
-# exec --no-startup-id rclone mount onedrive:storage ~/storage --vfs-cache-mode full --daemon
-# exec --no-startup-id rclone mount onedrive:notebook ~/notebook --vfs-cache-mode full --daemon
-# microsoft todo exec_always --no-startup-id ao --proxy-server=socks5://127.0.0.1:9000
+
+# music
+assign [class="lx-music-desktop"] 
+bindsym $mod+n workspace ; exec lx-music-desktop
+
+# web
+bindsym $mod+w workspace 爵
+
+# q
+# for_window [instance="QQ.exe"] floating enable
+# for_window [instance="QQ.exe"] border none
 
 
 # Color palette used for the terminal ( ~/.Xresources file )
