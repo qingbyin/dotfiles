@@ -16,6 +16,7 @@
     "coc.preferences.formatOnSaveFiletypes": ["cpp", "python", "cmake", "rust"],
     "python.formatting.provider": "yapf",
     "python.formatting.yapfPath": "~/.local/bin/yapf",
+    "python.analysis.useLibraryCodeForTypes": false,
     "suggest.noselect": false,
     "snippets.extends": {"latex":["tex"]},
     "snippets.ultisnips.directories": [
@@ -69,12 +70,19 @@
       "poroelasticity",
       "poromechanical",
       "pybind",
+      "pyplot",
       "pyproject",
+      "quasibrittle",
       "scipy",
+      "sympy",
       "uncracked",
       "vectorize",
       "wellbore",
+      "xlabel",
+      "xlim",
       "xticks",
+      "ylabel",
+      "ylim",
       "yticks"
     ],
     "cSpell.enabledLanguageIds": [
