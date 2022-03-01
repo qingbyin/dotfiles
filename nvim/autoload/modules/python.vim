@@ -7,6 +7,10 @@ function! modules#python#plugins() abort
 
     call add(plugins, ['jpalardy/vim-slime', { 'for': 'python' }])
     call add(plugins, ['hanschen/vim-ipython-cell', { 'for': 'python' }])
+
+    call add(plugins, ['kalekundert/vim-coiled-snake',{ 'for': 'python'}])
+    " call add(plugins, ['tmhedberg/SimpylFold',{ 'for': 'python'}])
+    call add(plugins, ['Konfekt/FastFold',{ 'for': 'python'}])
     return plugins
 endfunction
 
@@ -24,6 +28,7 @@ function! modules#python#config() abort
     let g:pydocstring_templates_path = '~/.config/pydocstring/'
     
     " the path to the virtual env's path
+    let g:python3_host_skip_check=1
     let g:python3_host_prog = '~/miniconda3/bin/python'
     " Disable python 2 support
     let g:loaded_python_provider = 0
