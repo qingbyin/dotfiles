@@ -10,7 +10,7 @@ endfunction
 
 function! modules#coc#config() abort
     " Debug coc
-    let g:node_client_debug = 1
+    " let g:node_client_debug = 1
 
    " TextEdit might fail if hidden is not set.
     set hidden
