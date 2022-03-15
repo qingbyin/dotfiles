@@ -11,6 +11,7 @@ function! modules#python#plugins() abort
     call add(plugins, ['kalekundert/vim-coiled-snake',{ 'for': 'python'}])
     " call add(plugins, ['tmhedberg/SimpylFold',{ 'for': 'python'}])
     call add(plugins, ['Konfekt/FastFold',{ 'for': 'python'}])
+    call add(plugins, ['Yggdroot/indentLine',{ 'for': 'python'}])
     return plugins
 endfunction
 
