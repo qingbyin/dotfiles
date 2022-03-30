@@ -11,6 +11,7 @@ function! modules#python#plugins() abort
     call add(plugins, ['kalekundert/vim-coiled-snake',{ 'for': 'python'}])
     " call add(plugins, ['tmhedberg/SimpylFold',{ 'for': 'python'}])
     call add(plugins, ['Konfekt/FastFold',{ 'for': 'python'}])
+
     call add(plugins, ['Yggdroot/indentLine',{ 'for': 'python'}])
     return plugins
 endfunction
@@ -27,6 +28,7 @@ function! modules#python#config() abort
     " doc auto generator style
     " let g:pydocstring_formatter = 'sphinx'
     let g:pydocstring_templates_path = '~/.config/pydocstring/'
+    let g:pydocstring_doq_path= '~/miniconda3/envs/sci/bin/doq'
     
     " the path to the virtual env's path
     let g:python3_host_skip_check=1
@@ -34,6 +36,8 @@ function! modules#python#config() abort
     " Disable python 2 support
     let g:loaded_python_provider = 0
 
+    " folds are only updated manually but not when saving the buffer
+    let g:fastfold_savehook = 0
 
     let g:slime_target = 'neovim'
     let g:slime_dont_ask_default = 1
