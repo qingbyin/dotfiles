@@ -84,6 +84,8 @@ install_common_apps:
 	# yes | yay -S texlive-most-doc
 	# without doc, and use online doc: https://texdoc.org/index.html
 	sudo pacman -S texlive-most
+	# Show keystrokes on screen
+	sudo pacman -S screenkey
 
 install_zathura:
 	yes | sudo pacman -S zathura zathura-pdf-mupdf
