@@ -158,6 +158,12 @@ unset_http_proxy() {
     git config --global --unset http.proxy
 }
 
+ssr_run() {
+    arg1=$1
+    shadowsocksr-cli -S
+    shadowsocksr-cli -p 9000 -s $1
+}
+
 
 # Go proxy
 # go env -w GO111MODULE=on
