@@ -90,17 +90,17 @@ install_common_apps:
 	# Also install thunderbird add-ons, Thunderbird Conversations
 	yes | sudo pacman -S thunderbird 
 	yes | yay -S birdtray
-
 	yes | sudo pacman -S flameshot
-	yes | sudo pacman -S textlive-most texlive-langchinese
 	yes | sudo pacman -S arandr # xrandr GUI
 	yes | yay -S drawio-desktip-bin 
-	# doc option: very big (with all package documentations)
-	# yes | yay -S texlive-most-doc
-	# without doc, and use online doc: https://texdoc.org/index.html
-	sudo pacman -S texlive-most
 	# Show keystrokes on screen
 	sudo pacman -S screenkey
+
+install_tex:
+	# without doc, and use online doc: https://texdoc.org/index.html
+	sudo pacman -S texlive-most texlive-langchinese
+	# doc option: very big (with all package documentations)
+	# yay -S texlive-most-doc
 
 install_zathura:
 	yes | sudo pacman -S zathura zathura-pdf-mupdf
