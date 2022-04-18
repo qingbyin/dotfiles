@@ -24,6 +24,20 @@ preparation:
 	echo "Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch" | sudo tee -a /etc/pacman.conf
 	sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring
 
+install_zsh:
+	@echo "Install zsh..."
+	@echo "================="
+	sudo pacman -S zsh
+	@echo "Install oh my zsh..."
+	@echo "================="
+	git clone https://gitee.com/mirrors/oh-my-zsh/ $(ZSH)
+	ln -sf $(dotdir)/zsh/zshrc ~/.zshrc
+	# plugins
+	git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${zshdir}/themes/powerlevel10k
+	ln -sf $(dotdir)/zsh/p10k.zsh ~/.p10k.zsh
+	sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting
+	chsh -s /usr/bin/zsh
+
 install_conda:
 	@echo "Install miniconda3.."
 	bash < (curl -s https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py39_4.10.3-Linux-x86_64.sh)

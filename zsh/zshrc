@@ -92,14 +92,16 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
     # last-working-dir
     git
-    zsh-syntax-highlighting
+    #zsh-syntax-highlighting
     # autoenv # install before: yay -S autoenv-git
     # poetry
     pip
-    conda-zsh-completion
+    #conda-zsh-completion
     # Move this autosuggestions to the bottom to avoid being overriding
-    zsh-autosuggestions
+    #zsh-autosuggestions
 )
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Required by the conda plugin
 fpath+=$ZSH/custom/plugins/conda-zsh-completion
 # autornv
