@@ -18,10 +18,9 @@ preparation:
 	sudo pacman-mirrors -c China
 	sudo pacman-mirrors -f 0
 	sudo pacman -Syu
-
 	# ArchlinuxCN contains common fonts, apps
 	echo "[archlinuxcn]" | sudo tee -a /etc/pacman.conf
-	echo "Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch" | sudo tee -a /etc/pacman.conf
+	echo 'Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$$arch' | sudo tee -a /etc/pacman.conf
 	sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring
 
 install_zsh:
