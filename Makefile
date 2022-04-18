@@ -5,7 +5,7 @@ ZSH=$(HOME)/.oh-my-zsh
 dotdir=~/dotfiles
 zshdir=~/.oh-my-zsh/custom
 
-all: preparation install_fonts install_common_apps install_vim install_zsh install_fcitx
+all: preparation install_zsh install_conda install_vim
 	@echo "Install dotfiles."
 	@echo "================="
 	@echo ""
@@ -22,6 +22,9 @@ preparation:
 	echo "[archlinuxcn]" | sudo tee -a /etc/pacman.conf
 	echo 'Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$$arch' | sudo tee -a /etc/pacman.conf
 	sudo pacman -Sy && sudo pacman -S archlinuxcn-keyring
+	# git config
+	git config --global user.name "Qing Yin"
+	git config --global user.email "qingbyin@gmail.com"
 
 install_zsh:
 	@echo "Install zsh..."
@@ -43,23 +46,16 @@ install_conda:
 	bash Miniconda3-latest-Linux-x86_64.sh
 	rm Miniconda3-latest-Linux-x86_64.sh
 
-install_ssr:
-	pip install shadowsocksr-cli
-
-install_fonts:
+install_i3_config:
 	# i3 config use them for windows
 	sudo pacman -S nerd-fonts-fira-code # require ArchlinuxCN
 	yes | @sudo pacman -S wqy-microhei
-
-install_basic:
 	# rofi
 	sudo pacman -S rofi
 	mkdir -p ~/.config/rofi
 	ln -sf $(dotdir)/rofi/config.rasi ~/.config/rofi/config.rasi	
-
 	# terminal
 	yes | sudo pacman -S xfce4-terminal
-
 	# i3 config
 	ln -sf $(dotdir)/i3/config ~/.i3/config
 	ln -sf $(dotdir)/i3/i3status.sh ~/.i3/i3status.sh
@@ -72,12 +68,9 @@ install_basic:
 	# ln -sf $(dotdir)/Xmodmap ~/.Xmodmap
 	# Terminal settings
 	# ln -sf $(dotdir)/Xresources ~/.Xresources
-	
-	# git config
-	git config --global user.name "Qing Yin"
-	git config --global user.email "qingbyin@gmail.com"
 
 install_common_apps:
+	pip install shadowsocksr-cli
 	yes | sudo pacman -S chromium
 	yes | sudo pacman -S lazygit
 	yes | yay -S autotiling-git
