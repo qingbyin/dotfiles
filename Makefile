@@ -40,7 +40,9 @@ install_zsh:
 
 install_conda:
 	@echo "Install miniconda3.."
-	bash < (curl -s https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py39_4.10.3-Linux-x86_64.sh)
+	wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
+	bash Miniconda3-latest-Linux-x86_64.sh
+	rm Miniconda3-latest-Linux-x86_64.sh
 
 install_ssr:
 	pip install shadowsocksr-cli
