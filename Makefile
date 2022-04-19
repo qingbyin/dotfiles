@@ -94,8 +94,8 @@ install_tex:
 	sudo pacman -S texlive-most texlive-langchinese
 	# doc option: very big (with all package documentations)
 	# yay -S texlive-most-doc
-	# Required lsp for vim
-	sudo pacman -S texlab
+	# Required tools
+	sudo pacman -S biber texlab
 	# Required Fonts
 	sudo pacman -S noto-fonts-cjk
 	mkdir -p ${HOME}/.local/share/fonts
