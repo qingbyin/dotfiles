@@ -41,3 +41,11 @@ nnoremap <silent> <C-h> :call VSCodeNotify('workbench.action.navigateLeft')<CR>
 xnoremap <silent> <C-h> :call VSCodeNotify('workbench.action.navigateLeft')<CR>
 nnoremap <silent> <C-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
 xnoremap <silent> <C-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
+
+" Latex
+nnoremap <silent> <leader>v :call VSCodeNotify('latex-workshop.synctex')<CR>
+
+" Git
+nmap gj :call VSCodeNotify('workbench.action.editor.nextChange')<CR>
+nmap gk :call VSCodeNotify('workbench.action.editor.previousChange')<CR>
+
