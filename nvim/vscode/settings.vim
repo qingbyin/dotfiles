@@ -1,3 +1,4 @@
+let mapleader ="\<Space>"
 " Open Vs Code explorer
 nnoremap <leader>e :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
 xnoremap <leader>e :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>

@@ -1,6 +1,7 @@
 " --------------------------------------------------------------
 " General Settings
 " --------------------------------------------------------------
+if !exists('g:vscode')
 source $HOME/.config/nvim/general/settings.vim
 
 " Key mappings
@@ -63,11 +64,12 @@ require'lualine'.setup {
     }
 }
 EOF
+endif
 
 " --------------------------------------------------------------
 " VS Code configuration
 " --------------------------------------------------------------
 if exists('g:vscode')
     source $HOME/.config/nvim/vscode/settings.vim
-    source $HOME/.config/nvim/plug-config/easymotion.vim
+    " source $HOME/.config/nvim/plug-config/easymotion.vim
 endif
