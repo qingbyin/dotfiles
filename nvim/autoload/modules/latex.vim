@@ -48,8 +48,8 @@ endfunction
 function! s:mappings() abort
     " autocmd filetype tex imap <F5> :CocCommand latex.Build<CR>
     " autocmd filetype tex nmap <F5> :CocCommand latex.Build<CR>
-    autocmd filetype tex nmap <Space>v :CocCommand latex.ForwardSearch<CR>
+    " autocmd filetype tex nmap <Space>v :CocCommand latex.ForwardSearch<CR>
     autocmd filetype tex imap <F5> <plug>(vimtex-compile)
     autocmd filetype tex nmap <F5> <plug>(vimtex-compile)
-    " autocmd filetype tex nmap <Space>v <plug>(vimtex-view)
+    autocmd filetype tex nmap <Space>v <plug>(vimtex-view)
 endfunction
