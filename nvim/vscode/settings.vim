@@ -48,4 +48,9 @@ nnoremap <silent> <leader>v :call VSCodeNotify('latex-workshop.synctex')<CR>
 " Git
 nmap gj :call VSCodeNotify('workbench.action.editor.nextChange')<CR>
 nmap gk :call VSCodeNotify('workbench.action.editor.previousChange')<CR>
+nnoremap <silent> <leader>G :call VSCodeNotify('workbench.view.scm')<CR>
+
+" Switch input method
+" Need to download im-select.exe in https://github.com/daipeihust/im-select
+autocmd InsertLeave * :silent !~/.local/bin/im-select 1033
 
