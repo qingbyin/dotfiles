@@ -42,6 +42,9 @@ xnoremap <silent> <C-h> :call VSCodeNotify('workbench.action.navigateLeft')<CR>
 nnoremap <silent> <C-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
 xnoremap <silent> <C-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
 
+" Close editor
+nnoremap <silent> <leader>q :call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
+
 " Latex
 nnoremap <silent> <leader>v :call VSCodeNotify('latex-workshop.synctex')<CR>
 
