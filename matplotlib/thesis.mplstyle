@@ -1,0 +1,39 @@
+# Thesis journal style
+#
+#
+# ==============================================================================
+# Font
+# ------------------------------------------------------------------------------
+# font type
+font.family: serif, Source Han Serif CN
+font.sans-serif : Arial, Source Han San CN
+font.serif : Times New Roman, Source Han Serif CN
+# Math font
+mathtext.fontset: custom
+mathtext.rm  : serif
+mathtext.it  : serif:italic
+mathtext.bf  : serif:bold
+mathtext.cal : serif
+
+# ------------------------------------------------------------------------------
+# font size
+font.size : 9  # font size of the text size
+axes.titlesize : 9  # font size of the axes title
+axes.labelsize : 9  # font size of the x and y labels
+xtick.labelsize : 9  # font size of the tick labels
+ytick.labelsize : 9  # font size of the tick labels
+legend.fontsize : 9  # font size of legend
+figure.titlesize : 9  # font size of the figure title
+figure.figsize: 3.14961, 1.9466 # figure size (golden ratio), inch
+
+# ==============================================================================
+# Lines width
+lines.linewidth : 1.0  # line width in points
+axes.linewidth: 1.0  # axes line width
+
+# ==============================================================================
+# legend
+legend.loc : upper right
+legend.frameon : False
+legend.numpoints : 1  # the number of points in the legend line
+legend.scatterpoints : 1  # number of scatter points

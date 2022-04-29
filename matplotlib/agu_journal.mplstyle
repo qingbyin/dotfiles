@@ -1,0 +1,38 @@
+# AGU journal style
+#
+#
+# ==============================================================================
+# Font
+# ------------------------------------------------------------------------------
+# font type
+font.family : sans-serif
+font.sans-serif : Arial
+font.serif : Times New Roman, DejaVu Serif
+# Math font
+mathtext.fontset: custom
+mathtext.rm  : serif
+mathtext.it  : serif:italic
+mathtext.bf  : serif:bold
+mathtext.cal : serif
+
+# ------------------------------------------------------------------------------
+# font size
+font.size : 8  # font size of the text size
+axes.titlesize : 8  # font size of the axes title
+axes.labelsize : 8  # font size of the x and y labels
+xtick.labelsize : 8  # font size of the tick labels
+ytick.labelsize : 8  # font size of the tick labels
+legend.fontsize : 8  # font size of legend
+figure.titlesize : 8  # font size of the figure title
+
+# ==============================================================================
+# Lines width
+lines.linewidth : 1.0  # line width in points
+axes.linewidth: 1.0  # axes line width
+
+# ==============================================================================
+# legend
+legend.loc : upper right
+legend.frameon : False
+legend.numpoints : 1  # the number of points in the legend line
+legend.scatterpoints : 1  # number of scatter points

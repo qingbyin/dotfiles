@@ -137,3 +137,9 @@ install_fcitx:
 	ln -sf $(dotdir)/fcitx/pam_environment ~/.pam_environment
 	ln -sf $(dotdir)/fcitx/pinyin.conf ~/.config/fcitx5/conf/pinyin.conf
 	ln -sf $(dotdir)/fcitx/classicui.conf ~/.config/fcitx5/conf/classicui.conf
+
+config_matplotlib:
+	@echo "Config matplotlib sytle template..."
+	@echo ""
+	mkdir -p ~/.config/matplotlib/stylelib
+	ln -sf $(dotdir)/matplotlib/* ~/.config/matplotlib/stylelib/
