@@ -96,8 +96,9 @@ install_tex:
 	# yay -S texlive-most-doc
 	# Required tools
 	sudo pacman -S biber texlab
-	# Required Fonts
-	sudo pacman -S noto-fonts-cjk
+	# Required Fonts (not noto-cjk which will put JP first)
+	sudo pacman -S adobe-source-han-serif-cn-fonts
+	sudo pacman -S adobe-source-han-sans-cn-fonts
 	mkdir -p ${HOME}/.local/share/fonts
 	cp -r ${dotdir}/fonts ${HOME}/.local/share/fonts
 	fc-cache -vf
