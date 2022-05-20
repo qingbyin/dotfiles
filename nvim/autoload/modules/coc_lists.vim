@@ -28,7 +28,7 @@ function! s:mappings() abort
     nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 
     " Show all commands (Similar to ctrl+shift+p in VS Code)
-    nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+    nnoremap <silent><nowait> <space>C  :<C-u>CocList commands<cr>
     " Find symbol of current document.
     nnoremap <silent><nowait> <Leader>o  :<C-u>CocList outline<cr>
     " Search workspace symbols.

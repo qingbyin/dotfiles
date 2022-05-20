@@ -14,6 +14,8 @@ function! modules#python#plugins() abort
 
     call add(plugins, ['dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }])
 
+    call add(plugins, ['luk400/vim-jukit' ])
+
     call add(plugins, ['Yggdroot/indentLine',{ 'for': 'python'}])
     return plugins
 endfunction
@@ -47,6 +49,9 @@ function! modules#python#config() abort
     " fix paste issues in ipython
     let g:slime_python_ipython = 1
     " let g:slime_no_mappings = 1
+    "
+    let g:jukit_output_new_os_window = 1
+    let g:jukit_mappings = 0 " Disable default mappings
 
     call s:mappings()
 endfunction
@@ -59,19 +64,50 @@ function! s:mappings() abort
     " autocmd filetype python nmap <space>R :Codi!<CR>
 
     " Open IPython terminal
-    autocmd filetype python nmap <space>t :call IPythonOpen()<CR>
+    " autocmd filetype python nmap <space>t :call IPythonOpen()<CR>
     " Run
-    autocmd filetype python nmap <F5> :IPythonCellExecuteCell<CR>
-    autocmd filetype python imap <F5> :IPythonCellExecuteCell<CR>
-    autocmd filetype python nnoremap <F6> :IPythonCellRun<CR>
-    autocmd filetype python inoremap <F6> :IPythonCellRun<CR>
+    " autocmd filetype python nmap <F5> :IPythonCellExecuteCell<CR>
+    " autocmd filetype python imap <F5> :IPythonCellExecuteCell<CR>
+    " autocmd filetype python nnoremap <F6> :IPythonCellRun<CR>
+    " autocmd filetype python inoremap <F6> :IPythonCellRun<CR>
     " close all Matplotlib figure windows
-    autocmd filetype python nnoremap <Leader>x :IPythonCellClose<CR>
+    " autocmd filetype python nnoremap <Leader>x :IPythonCellClose<CR>
 
-    nnoremap <expr><silent> <LocalLeader>r  nvim_exec('MagmaEvaluateOperator', v:true)
-    nnoremap <silent>       <LocalLeader>rr :MagmaEvaluateLine<CR>
-    xnoremap <silent>       <LocalLeader>r  :<C-u>MagmaEvaluateVisual<CR>
-    nnoremap <silent>       <LocalLeader>rc :MagmaReevaluateCell<CR>
+    " nnoremap <expr><silent> <LocalLeader>r  nvim_exec('MagmaEvaluateOperator', v:true)
+    " nnoremap <silent>       <LocalLeader>rr :MagmaEvaluateLine<CR>
+    " xnoremap <silent>       <LocalLeader>r  :<C-u>MagmaEvaluateVisual<CR>
+    " nnoremap <silent>       <LocalLeader>rc :MagmaReevaluateCell<CR>
+    " nnoremap <expr><silent> <Space>r  nvim_exec('MagmaEvaluateOperator', v:true)ip
+    
+    autocmd filetype python nmap <space>r :JukitOut conda activate sci<CR>
+    " Send current cell to output split
+    autocmd filetype python nmap <cr> :call jukit#send#section(0)<cr>
+    " Send visually selected code to output split
+    autocmd filetype python vnoremap <cr> :<C-U>call jukit#send#selection()<cr>
+    " Execute all cells until the current cell
+    nnoremap <leader>cc :call jukit#send#until_current_section()<cr>
+    " Execute all cells
+    autocmd filetype python nmap <F5> :call jukit#send#all()<cr>
+    autocmd filetype python imap <F5> :call jukit#send#all()<cr>
+    " Create new code cell above/below
+    nnoremap <leader>ca :call jukit#cells#create_above(0)<cr>
+    nnoremap <leader>cb :call jukit#cells#create_below(0)<cr>
+    " Create new text cell above/below
+    nnoremap <leader>cA :call jukit#cells#create_above(1)<cr>
+    nnoremap <leader>cB :call jukit#cells#create_below(1)<cr>
+    " Merge current cell with the cell above/below
+    nnoremap <leader>cM :call jukit#cells#merge_above()<cr>
+    nnoremap <leader>cm :call jukit#cells#merge_below()<cr>
+    " split current cell
+    nnoremap <leader>cs :call jukit#cells#split()<cr>
+    " Move current cell up/down
+    nnoremap <leader>ck :call jukit#cells#move_up()<cr>
+    nnoremap <leader>cj :call jukit#cells#move_down()<cr>
+    " Delete saved output of current/all cell(s)
+    nnoremap <leader>cd :call jukit#cells#delete_outputs(0)<cr>
+    nnoremap <leader>cD :call jukit#cells#delete_outputs(0)<cr>
+    " Convert from ipynb to py or vice versa.
+    nnoremap <leader>np :call jukit#convert#notebook_convert("jupyter-notebook")<cr>
 
 endfunction
 
