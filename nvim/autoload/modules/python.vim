@@ -12,6 +12,8 @@ function! modules#python#plugins() abort
     " call add(plugins, ['tmhedberg/SimpylFold',{ 'for': 'python'}])
     call add(plugins, ['Konfekt/FastFold',{ 'for': 'python'}])
 
+    call add(plugins, ['dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }])
+
     call add(plugins, ['Yggdroot/indentLine',{ 'for': 'python'}])
     return plugins
 endfunction
@@ -53,8 +55,8 @@ function! s:mappings() abort
     autocmd filetype python nmap <silent> <space>d <Plug>(pydocstring)
 
     " Run codi for interactive coding
-    autocmd filetype python nmap <space>r :Codi<CR>
-    autocmd filetype python nmap <space>R :Codi!<CR>
+    " autocmd filetype python nmap <space>r :Codi<CR>
+    " autocmd filetype python nmap <space>R :Codi!<CR>
 
     " Open IPython terminal
     autocmd filetype python nmap <space>t :call IPythonOpen()<CR>
@@ -66,6 +68,10 @@ function! s:mappings() abort
     " close all Matplotlib figure windows
     autocmd filetype python nnoremap <Leader>x :IPythonCellClose<CR>
 
+    nnoremap <expr><silent> <LocalLeader>r  nvim_exec('MagmaEvaluateOperator', v:true)
+    nnoremap <silent>       <LocalLeader>rr :MagmaEvaluateLine<CR>
+    xnoremap <silent>       <LocalLeader>r  :<C-u>MagmaEvaluateVisual<CR>
+    nnoremap <silent>       <LocalLeader>rc :MagmaReevaluateCell<CR>
 
 endfunction
 
