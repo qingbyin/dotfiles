@@ -9,6 +9,7 @@
     "diagnostic.hintSign": "",
     "diagnostic.infoSign": "",
     "diagnostic.warningSign": "",
+    "colors.filetypes": ["*"],
     "highlight.disableLanguages": ["python"],
     "clangd.semanticHighlighting": true,
     "clangd.arguments": ["-cross-file-rename"],
