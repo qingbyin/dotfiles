@@ -29,7 +29,7 @@ endfunction
 function! modules#common#config() abort
     " Use a split window for the output
     "https://github.com/metakirby5/codi.vim/issues/138
-    let g:codi#virtual_text = 0
+    " let g:codi#virtual_text = 0
 
     let g:codi#log="/tmp/codi.log"
 
