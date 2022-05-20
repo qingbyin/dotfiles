@@ -29,6 +29,7 @@ function! modules#python#config() abort
     " let g:pydocstring_formatter = 'sphinx'
     let g:pydocstring_templates_path = '~/.config/pydocstring/'
     let g:pydocstring_doq_path= '~/miniconda3/envs/sci/bin/doq'
+    let g:pydocstring_enable_mapping = 0 " Disable default mappings
     
     " the path to the virtual env's path
     let g:python3_host_skip_check=1
