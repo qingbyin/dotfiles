@@ -31,7 +31,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec GLFW_IM_MODULE=ibus kitty
 
 # kill focused window
 bindsym $mod+q kill
