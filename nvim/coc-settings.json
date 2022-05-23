@@ -17,7 +17,7 @@
     "coc.preferences.formatOnSaveFiletypes": ["cpp", "python", "cmake", "rust"],
     "python.formatting.provider": "yapf",
     "python.formatting.yapfPath": "~/.local/bin/yapf",
-    "python.analysis.useLibraryCodeForTypes": false,
+    "python.analysis.useLibraryCodeForTypes": true,
     "suggest.noselect": false,
     "snippets.extends": {"latex":["tex"]},
     "snippets.ultisnips.directories": [
