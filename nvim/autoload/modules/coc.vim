@@ -84,7 +84,7 @@ function! s:mappings() abort
     " Toggle fix suggestions for a word (used to fix spell error, code error...)
     nmap <C-space> <Plug>(coc-codeaction-selected)w
 
-    " Remap <C-j> and <C-k> for scroll float windows/popups.
+    " Remap <C-b> and <C-f> for scroll float windows/popups.
     if has('nvim-0.4.0') || has('patch-8.2.0750')
       nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
       nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"

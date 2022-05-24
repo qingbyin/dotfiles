@@ -84,6 +84,7 @@ function! s:mappings() abort
     autocmd filetype python nmap <cr> :call jukit#send#section(0)<cr>
     " Send visually selected code to output split
     autocmd filetype python vnoremap <cr> :<C-U>call jukit#send#selection()<cr>
+    autocmd filetype python nmap <space><space> :call jukit#send#line()<cr>
     " Execute all cells until the current cell
     nnoremap <leader>cc :call jukit#send#until_current_section()<cr>
     " Execute all cells
