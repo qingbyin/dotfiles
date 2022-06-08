@@ -133,7 +133,7 @@ install_vim:
 install_fcitx:
 	@echo "Install fcitx..."
 	@echo ""
-	sudo pacman -S fcitx5 fcitx5-chinese-addons fcitx5-qt fcitx5-gtk fcitx5-nord
+	sudo pacman -S fcitx5 fcitx5-chinese-addons fcitx5-qt fcitx5-gtk fcitx5-nord fcitx5-config-qt
 	yay -S fcitx5-pinyin-zhwiki
 	ln -sf $(dotdir)/fcitx/pam_environment ~/.pam_environment
 	ln -sf $(dotdir)/fcitx/pinyin.conf ~/.config/fcitx5/conf/pinyin.conf
