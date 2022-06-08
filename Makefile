@@ -69,6 +69,11 @@ install_i3_config:
 	# Terminal settings
 	# ln -sf $(dotdir)/Xresources ~/.Xresources
 
+install_terminal:
+	sudo pacman -S kitty
+	mkdir -p ~/.config/kitty
+	ln -sf $(dotdir)/kitty.conf ~/.config/kitty/kitty.conf
+
 install_common_apps:
 	pip install shadowsocksr-cli
 	yes | sudo pacman -S chromium
@@ -88,6 +93,7 @@ install_common_apps:
 	yes | yay -S drawio-desktip-bin 
 	# Show keystrokes on screen
 	sudo pacman -S screenkey
+	sudo pacman -S anki # require ArchlinuxCN
 
 install_tex:
 	# without doc, and use online doc: https://texdoc.org/index.html
