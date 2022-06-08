@@ -49,7 +49,7 @@ install_conda:
 install_i3_config:
 	# i3 config use them for windows
 	sudo pacman -S nerd-fonts-fira-code # require ArchlinuxCN
-	yes | @sudo pacman -S wqy-microhei
+	yes | sudo pacman -S wqy-microhei
 	# rofi
 	sudo pacman -S rofi
 	mkdir -p ~/.config/rofi
