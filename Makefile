@@ -46,10 +46,19 @@ install_conda:
 	bash Miniconda3-latest-Linux-x86_64.sh
 	rm Miniconda3-latest-Linux-x86_64.sh
 
-install_i3_config:
+install_fonts:
 	# i3 config use them for windows
 	sudo pacman -S nerd-fonts-fira-code # require ArchlinuxCN
 	yes | sudo pacman -S wqy-microhei
+	sudo pacman -S ttf-joypixels # color emoji
+	# Required Fonts (not noto-cjk which will put JP first)
+	sudo pacman -S adobe-source-han-serif-cn-fonts
+	sudo pacman -S adobe-source-han-sans-cn-fonts
+	mkdir -p ${HOME}/.local/share/fonts
+	cp -r ${dotdir}/fonts ${HOME}/.local/share/fonts
+	fc-cache -vf
+
+install_i3_config:
 	# rofi
 	sudo pacman -S rofi
 	mkdir -p ~/.config/rofi
@@ -59,6 +68,7 @@ install_i3_config:
 	# i3 config
 	ln -sf $(dotdir)/i3/config ~/.i3/config
 	ln -sf $(dotdir)/i3/i3status.sh ~/.i3/i3status.sh
+	ln -sf $(dotdir)/i3/i3status.conf ~/.i3status.conf
 	mkdir -p ~/.local/bin
 	mkdir -p ~/.config/conky
 	ln -sf $(dotdir)/conky/start_conky_custom ~/.local/bin/start_conky_custom
@@ -102,12 +112,6 @@ install_tex:
 	# yay -S texlive-most-doc
 	# Required tools
 	sudo pacman -S biber texlab
-	# Required Fonts (not noto-cjk which will put JP first)
-	sudo pacman -S adobe-source-han-serif-cn-fonts
-	sudo pacman -S adobe-source-han-sans-cn-fonts
-	mkdir -p ${HOME}/.local/share/fonts
-	cp -r ${dotdir}/fonts ${HOME}/.local/share/fonts
-	fc-cache -vf
 
 install_zathura:
 	yes | sudo pacman -S zathura zathura-pdf-mupdf
