@@ -86,6 +86,7 @@ install_terminal:
 
 install_common_apps:
 	sudo pacman -S pavucontrol # GUI tool for audio sound (PulseAudio)
+	# Then click 'volumeicon' and set mixter to `pavucontrol`
 	pip install shadowsocksr-cli
 	yes | sudo pacman -S chromium
 	yes | sudo pacman -S lazygit
