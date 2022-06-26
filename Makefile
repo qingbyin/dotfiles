@@ -85,6 +85,7 @@ install_terminal:
 	ln -sf $(dotdir)/kitty.conf ~/.config/kitty/kitty.conf
 
 install_common_apps:
+	sudo pacman -S pavucontrol # GUI tool for audio sound (PulseAudio)
 	pip install shadowsocksr-cli
 	yes | sudo pacman -S chromium
 	yes | sudo pacman -S lazygit
