@@ -84,6 +84,10 @@ install_terminal:
 	mkdir -p ~/.config/kitty
 	ln -sf $(dotdir)/kitty.conf ~/.config/kitty/kitty.conf
 
+install_rclone:
+	sudo pacman -S rclone
+	ln -sf $(dotdir)/rclone@onedrive.service ~/.config/systemd/user/rclone@onedrive.service
+
 install_common_apps:
 	sudo pacman -S pavucontrol # GUI tool for audio sound (PulseAudio)
 	# Then click 'volumeicon' and set mixter to `pavucontrol`
