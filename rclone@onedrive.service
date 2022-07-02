@@ -20,7 +20,7 @@ Environment=RCLONE_CONFIG=%h/.config/rclone/rclone.conf
 Type=notify
 ExecStart= \
   /usr/bin/rclone mount %i: %h/%i \
-    --vfs-cache-mode writes \
+    --vfs-cache-mode full \
     --vfs-cache-max-size 200M \
     --dir-cache-time 100h \
     --log-level INFO \
