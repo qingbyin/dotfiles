@@ -52,6 +52,7 @@ function! modules#python#config() abort
     "
     let g:jukit_output_new_os_window = 1
     let g:jukit_mappings = 0 " Disable default mappings
+    let g:jukit_highlight_markers = 0 " Disable cell markers highlight
 
     call s:mappings()
 endfunction
