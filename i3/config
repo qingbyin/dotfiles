@@ -342,7 +342,7 @@ exec_always --no-startup-id birdtray
 
 # music
 assign [class="lx-music-desktop"] 
-bindsym $mod+n workspace ; exec lx-music-desktop
+bindsym $mod+n workspace 
 
 # web
 bindsym $mod+w workspace 爵
