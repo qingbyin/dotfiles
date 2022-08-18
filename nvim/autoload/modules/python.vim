@@ -4,8 +4,11 @@ function! modules#python#plugins() abort
     call add(g:coc_global_extensions, 'coc-pyright')
 
     call add(plugins, ['heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }])
+
+    " fold for Python
     call add(plugins, ['kalekundert/vim-coiled-snake',{ 'for': 'python'}])
-    " call add(plugins, ['tmhedberg/SimpylFold',{ 'for': 'python'}])
+    call add(plugins, ['Konfekt/FastFold',{ 'for': 'python'}])
+
     call add(plugins, ['luk400/vim-jukit' ])
 
     call add(plugins, ['Yggdroot/indentLine',{ 'for': 'python'}])
