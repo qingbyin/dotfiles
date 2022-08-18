@@ -4,15 +4,8 @@ function! modules#python#plugins() abort
     call add(g:coc_global_extensions, 'coc-pyright')
 
     call add(plugins, ['heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }])
-
-    call add(plugins, ['jpalardy/vim-slime', { 'for': 'python' }])
-    call add(plugins, ['hanschen/vim-ipython-cell', { 'for': 'python' }])
-
     call add(plugins, ['kalekundert/vim-coiled-snake',{ 'for': 'python'}])
     " call add(plugins, ['tmhedberg/SimpylFold',{ 'for': 'python'}])
-
-    call add(plugins, ['dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }])
-
     call add(plugins, ['luk400/vim-jukit' ])
 
     call add(plugins, ['Yggdroot/indentLine',{ 'for': 'python'}])
@@ -40,11 +33,6 @@ function! modules#python#config() abort
     " Disable python 2 support
     let g:loaded_python_provider = 0
 
-    let g:slime_target = 'neovim'
-    let g:slime_dont_ask_default = 1
-    " fix paste issues in ipython
-    let g:slime_python_ipython = 1
-    " let g:slime_no_mappings = 1
     "
     let g:jukit_output_new_os_window = 1
     let g:jukit_mappings = 0 " Disable default mappings
@@ -107,19 +95,4 @@ function! s:mappings() abort
     " Convert from ipynb to py or vice versa.
     nnoremap <leader>np :call jukit#convert#notebook_convert("jupyter-notebook")<cr>
 
-endfunction
-
-" Auto open a terminal and enter into IPython
-function! IPythonOpen()
-    " open a new terminal in vertical split and run IPython
-    vnew|call termopen('ipython --matplotlib')
-    file ipython " name the new buffer
-
-    " set slime target to new terminal
-    if !exists('g:slime_default_config')
-        let g:slime_default_config = {}
-    end
-    let g:slime_default_config['jobid'] = b:terminal_job_id
-
-    wincmd p " switch to the previous buffer
 endfunction
