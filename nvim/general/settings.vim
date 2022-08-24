@@ -50,5 +50,8 @@ set wildmode=longest:full,full
 " pop menu height
 set pumheight=10
 
+" Unfold when opening files
+set foldlevelstart=99
+
 " Auto remove trailing whitespace when saving
 autocmd FileType markdown,tex autocmd BufWritePre <buffer> %s/\s\+$//e
