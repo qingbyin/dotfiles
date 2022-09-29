@@ -22,7 +22,7 @@ hide_edge_borders none
 # bindsym $mod+n border normal
 
 # Font
-font pango: FiraCode Nerd Font Mono 12, WenQuanYi Micro Hei 12
+font pango: FiraCode Nerd Font Mono, WenQuanYi Micro Hei 12
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -397,7 +397,7 @@ bar {
 	bindsym button4 nop
 	bindsym button5 nop
 #   font xft:URWGothic-Book 11
-	strip_workspace_numbers yes
+    strip_workspace_numbers yes
 
     colors {
         # background #222D31
