@@ -132,5 +132,6 @@
     "cSpell.ignoreRegExpList": [
       "\\\\\\w*(\\[.*?\\])?(\\{.*?\\})?",
       "\\$.+?\\$"
-    ]
+    ],
+    "markdown-preview-enhanced.previewTheme": "atom-material.css"
 }
