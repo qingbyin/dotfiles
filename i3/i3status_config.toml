@@ -5,7 +5,7 @@ name = "native"
 # idle_bg = "none"
 
 [icons]
-name = "awesome5"
+name = "awesome6"
 
 # [[block]]
 # block = "focused_window"
@@ -19,7 +19,7 @@ interval = 5
 
 [[block]]
 block = "custom"
-command = "echo $(head -n 1 ~/dotfiles/i3/motto.md)"
+command = "echo '\uf6ad' $(head -n 1 ~/dotfiles/i3/motto.md)"
 
 [[block]]
 block = "disk_space"
