@@ -49,9 +49,9 @@ interval = 5
 # # chip = "*-isa-*"
 # # inputs = ["CPUTIN", "SYSTIN"]
 
-[[block]]
-block = "sound"
-format = "{output_description} {volume}"
+# [[block]]
+# block = "sound"
+# format = "{output_description} {volume}"
 
 # [[block]]
 # block = "music"
