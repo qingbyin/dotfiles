@@ -67,8 +67,6 @@ install_i3_config:
 	yes | sudo pacman -S xfce4-terminal
 	# i3 config
 	ln -sf $(dotdir)/i3/config ~/.i3/config
-	ln -sf $(dotdir)/i3/i3status.sh ~/.i3/i3status.sh
-	ln -sf $(dotdir)/i3/i3status.conf ~/.i3status.conf
 	mkdir -p ~/.local/bin
 	mkdir -p ~/.config/conky
 	ln -sf $(dotdir)/conky/start_conky_custom ~/.local/bin/start_conky_custom
