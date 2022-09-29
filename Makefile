@@ -74,6 +74,10 @@ install_i3_config:
 	ln -sf $(dotdir)/conky/start_conky_custom ~/.local/bin/start_conky_custom
 	ln -sf $(dotdir)/conky/conky1.10_shortcuts_maia ~/.config/conky/conky1.10_shortcuts_maia
 	ln -sf $(dotdir)/conky/conky_maia ~/.config/conky/conky_maia
+	# i3 status rust
+	sudo pacman -S i3status-rust
+	ln -sf $(dotdir)/i3/i3status_config.toml ~/.config/i3status-rust/config.toml
+
 	# Map Caps Lock to Ctrl
 	# ln -sf $(dotdir)/Xmodmap ~/.Xmodmap
 	# Terminal settings
