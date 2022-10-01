@@ -346,11 +346,11 @@ bindsym $mod+y workspace 
 bindsym $mod+w workspace 
 
 # todo
-# assign [class="Gtg"] 
-# bindsym $mod+i workspace 
-for_window [class="Gtg" window_type="normal"] mark "gtg", move scratchpad
+assign [class="Gtg"] 
+bindsym $mod+i workspace 
 for_window [class="Gtg" window_type="utility"] floating toggle
-bindsym $mod+i [con_mark="gtg"] scratchpad show
+# for_window [class="Gtg" window_type="normal"] mark "gtg", move scratchpad
+# bindsym $mod+i [con_mark="gtg"] scratchpad show
 
 # anki
 for_window [class="Anki"] focus parent; move scratchpad, scratchpad show
