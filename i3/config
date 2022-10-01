@@ -240,8 +240,6 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
-# for_window [class="Anki"] focus parent;split h,layout stacking,sticky enable,floating enable
-for_window [class="Anki"] focus parent; move scratchpad, scratchpad show
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -342,10 +340,22 @@ exec_always --no-startup-id birdtray
 
 # music
 assign [class="lx-music-desktop"] 
-bindsym $mod+n workspace 
+bindsym $mod+y workspace 
 
 # web
 bindsym $mod+w workspace 
+
+# todo
+# assign [class="Gtg"] 
+# bindsym $mod+i workspace 
+for_window [class="Gtg" window_type="normal"] mark "gtg", move scratchpad
+for_window [class="Gtg" window_type="utility"] floating toggle
+bindsym $mod+i [con_mark="gtg"] scratchpad show
+
+# anki
+for_window [class="Anki"] focus parent; move scratchpad, scratchpad show
+# for_window [class="Anki"] move scratchpad
+# bindsym $mod+o [con_mark="anki"] scratchpad show
 
 # q
 # for_window [instance="QQ.exe"] floating enable
