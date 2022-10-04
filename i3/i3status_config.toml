@@ -19,7 +19,8 @@ interval = 5
 
 [[block]]
 block = "custom"
-command = "echo '\uf6ad' $(head -n 1 ~/dotfiles/i3/motto.md)"
+command = "echo '\uf6ad' $(shuf -n 1 ~/dotfiles/i3/motto.md)"
+interval = 3600
 
 [[block]]
 block = "disk_space"
