@@ -27,13 +27,17 @@ function! s:mappings() abort
     " Use <TAB> to confirm completion, `<C-g>u` means break undo chain at current
     " position. Coc only does snippet and additional edit on confirm.
     " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-    if exists('*complete_info')
-        inoremap <expr> <Tab> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<TAB>"
-    else
-        " "pumvisible()" checks if the popup menu is visible
-        " If true, insert the selected one; If false, insert the normal tab
-        inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<TAB>"
-    endif
+      inoremap <silent><expr> <TAB>
+        \ coc#pum#visible() ? coc#_select_confirm() :
+        \ coc#expandableOrJumpable() ?
+        \ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+        \ CheckBackSpace() ? "\<TAB>" :
+        \ coc#refresh()
+
+      function! CheckBackSpace() abort
+        let col = col('.') - 1
+        return !col || getline('.')[col - 1]  =~# '\s'
+      endfunction
 
     " -------------------------------------------------------------------
     " Use <c-space> to trigger completion.
@@ -47,8 +51,8 @@ function! s:mappings() abort
     inoremap <expr> <CR> pumvisible() ? "\<C-E>\<CR>" : "\<CR>"
 
     " Note: Let coc.nvim handles the completion key mappings
-    " but let ultisnips expand function snippets such as create_matrix
-    let g:UltiSnipsExpandTrigger = "<s-tab>" 
+    " Disable ultisnips trigger key mapping
+    let g:UltiSnipsExpandTrigger = "<NUL>" 
     " let g:UltiSnipsJumpForwardTrigger = '<c-j>'
     " let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 endfunction
