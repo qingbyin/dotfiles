@@ -57,4 +57,10 @@ function! modules#appearance#config_after() abort
     highlight CocHighlightText  guibg=#646470 ctermbg=223
     " Get rid of highlighting matches after searching text
     set nohlsearch
+
+    " Set highlight for the selected line when using CocList grep
+    highlight CocListLine ctermfg=237 guibg=#13354A
+    " Set highlight for the current popmenu item
+    " highlight CocMenuSel ctermfg=Red guibg=#ff0000
+
 endfunction
