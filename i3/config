@@ -355,7 +355,10 @@ for_window [class="Gtg" window_type="utility"] floating toggle
 # bindsym $mod+i [con_mark="gtg"] scratchpad show
 
 # anki
-for_window [class="Anki"] focus parent; move scratchpad, scratchpad show
+for_window [class="Anki" title="User 1 - Anki"] focus parent; move scratchpad, scratchpad show
+for_window [class="Anki" title="add"] focus parent; move scratchpad, scratchpad show
+for_window [class="Anki" title="Browse*"] focus parent; move scratchpad, scratchpad show
+# for_window [class="Anki" window_type="normal"] focus parent; move scratchpad, scratchpad show
 # for_window [class="Anki"] move scratchpad
 # bindsym $mod+o [con_mark="anki"] scratchpad show
 
