@@ -347,6 +347,7 @@ bindsym $mod+w workspace 
 
 # todo
 assign [class="Gtg"] 
+assign [class="korganizer"] 
 bindsym $mod+i workspace 
 for_window [class="Gtg" window_type="utility"] floating toggle
 # for_window [class="Gtg" window_type="normal"] mark "gtg", move scratchpad
