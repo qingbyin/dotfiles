@@ -206,6 +206,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # move the whole workspace to the primary output
 bindsym $mod+x move workspace to output primary
+bindsym $mod+shift+x move workspace to output left
 
 # Open applications on specific workspaces
 # assign [class="Pale moon"] $ws2
