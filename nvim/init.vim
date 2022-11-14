@@ -27,6 +27,7 @@ call modules#add('explorer')
 call modules#add('workspace')
 call modules#add('motion')
 call modules#add('snippets')
+call modules#add('org')
 " Language
 call modules#add('cpp')
 call modules#add('python')

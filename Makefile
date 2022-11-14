@@ -108,7 +108,7 @@ install_common_apps:
 	yes | yay -S birdtray
 	yes | sudo pacman -S flameshot
 	yes | sudo pacman -S arandr # xrandr GUI
-	yes | yay -S drawio-desktip-bin 
+	yes | yay -S drawio-desktop-bin 
 	# Show keystrokes on screen
 	sudo pacman -S screenkey
 	sudo pacman -S anki # require ArchlinuxCN
@@ -124,7 +124,7 @@ install_tex:
 install_zathura:
 	yes | sudo pacman -S zathura zathura-pdf-mupdf
 	mkdir -p ~/.config/zathura
-	ln -sf ${dotdir}/zathura ~/.config/zathura/zathurarc	
+	ln -sf ${dotdir}/zathurarc ~/.config/zathura/zathurarc	
 
 
 install_pomodoro:
