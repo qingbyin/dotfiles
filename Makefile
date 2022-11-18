@@ -112,6 +112,11 @@ install_common_apps:
 	# Show keystrokes on screen
 	sudo pacman -S screenkey
 	sudo pacman -S anki # require ArchlinuxCN
+	# Webcam
+	sudo pacman -S cheese
+	# screen record
+	sudo pacman -S simplescreenrecorder
+	sudo pacman -S vokoscreen # can embed the webcam
 
 install_tex:
 	# without doc, and use online doc: https://texdoc.org/index.html
