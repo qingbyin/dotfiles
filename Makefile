@@ -117,6 +117,8 @@ install_common_apps:
 	# screen record
 	sudo pacman -S simplescreenrecorder
 	sudo pacman -S vokoscreen # can embed the webcam
+	# Timer
+	sudo pacman -S kteatime
 
 install_tex:
 	# without doc, and use online doc: https://texdoc.org/index.html
