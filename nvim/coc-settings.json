@@ -14,7 +14,6 @@
     "clangd.semanticHighlighting": true,
     "clangd.arguments": ["-cross-file-rename"],
     "clangd.fallbackFlags": ["-std=c++2a"],
-    "coc.preferences.formatOnSaveFiletypes": ["cpp", "python", "cmake", "rust","sql"],
     "python.formatting.provider": "yapf",
     "python.formatting.yapfPath": "~/.local/bin/yapf",
     "python.analysis.useLibraryCodeForTypes": true,
