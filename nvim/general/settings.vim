@@ -18,6 +18,7 @@ set expandtab  " Convert tab to spaces automatically
 set tabstop=4  " 1 tab = 4 spaces
 set shiftwidth=4
 " Show whitespace/tab/break explicitly (Use symbols similar to Office Word)
+set encoding=utf8
 set list listchars=tab:→\ ,trail:·,precedes:←,extends:→,space:·
 
 " Hybrid line numbers
