@@ -18,6 +18,8 @@ function! modules#common#plugins() abort
     call add(g:coc_global_extensions, 'coc-yank')
 
     " call add(plugins, ['dstein64/vim-startuptime'])
+    " whichkey
+    call add(plugins, ['liuchengxu/vim-which-key'])
     return plugins
 endfunction
 
@@ -25,4 +27,7 @@ function! modules#common#config() abort
 
     " Auto pair
     autocmd FileType vim let b:coc_pairs_disabled = ['"']
+
+    nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
+    vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 endfunction
