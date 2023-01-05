@@ -336,7 +336,9 @@ exec_always --no-startup-id udiskie
 # thunderbird
 assign [class="Thunderbird"] 
 bindsym $mod+m workspace ; exec thunderbird
-exec_always --no-startup-id birdtray
+# exec_always --no-startup-id birdtray
+# nutstore
+exec_always --no-startup-id nutstore
 
 # music
 assign [class="lx-music-desktop"] 
