@@ -66,7 +66,7 @@ install_i3_config:
 	# terminal
 	yes | sudo pacman -S xfce4-terminal
 	# i3 config
-	ln -sf $(dotdir)/i3/config ~/.i3/config
+	ln -sf $(dotdir)/i3/config ~/.config/i3/config
 	mkdir -p ~/.local/bin
 	mkdir -p ~/.config/conky
 	ln -sf $(dotdir)/conky/start_conky_custom ~/.local/bin/start_conky_custom
@@ -74,6 +74,7 @@ install_i3_config:
 	ln -sf $(dotdir)/conky/conky_maia ~/.config/conky/conky_maia
 	# i3 status rust
 	sudo pacman -S i3status-rust ttf-font-awesome
+	mkdir -p ~/.config/i3status-rust
 	ln -sf $(dotdir)/i3/i3status_config.toml ~/.config/i3status-rust/config.toml
 
 	# Map Caps Lock to Ctrl
